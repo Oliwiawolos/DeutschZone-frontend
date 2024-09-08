@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+.home, .grammar{
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-sizE: 1rem;
+}
+.grammar{
+  font-size:1px;
+  background-image: url('./components/images/grammar1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+.listening{
+  font-size:1px;
+  background-image: url('./components/images/listening.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+.texts{
+  font-size:1px;
+  background-image: url('./components/images/read.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
