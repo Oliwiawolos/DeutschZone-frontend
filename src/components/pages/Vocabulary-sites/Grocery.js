@@ -1,20 +1,20 @@
 import React from 'react'
-import home from '../../images/HomeFamily.png'
+import grocery from '../../images/Grocery.png'
 import './Vocabulary-sites.css'
 import united from '../../images/united.png'
 import german from '../../images/german.png'
 import Footer from '../../Footer'
 import {Link} from 'react-router-dom';
-import './HomeFamilytest'
+import './Grocerytest'
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
-function HomeFamily() {
+function Grocery() {
   return (
     <>
       <div className="vocabulary-container">
-        <h1>Home & Family</h1>
-        <p>Learn German with our home and family vocabulary! Discover essential words for home and family in German, paired with fun illustrations to make learning easy and enjoyable.</p>
+        <h1>Grocery</h1>
+        <p>Learn German with our grocery vocabulary! Discover essential words for grocery shopping in German, paired with fun illustrations to make learning easy and enjoyable.</p>
         <div className='img-container'>
-          <img src={home} alt="Home"  />
+          <img src={grocery} alt="Grocery"  />
         </div>
         <div className="tables-container">
       <table className="table">
@@ -36,60 +36,60 @@ function HomeFamily() {
 </thead>
         <tbody>
           <tr>
-            <td>1.das Haus</td>
-            <td>house</td>
+            <td>1.das Brot</td>
+            <td>bread</td>
           </tr>
           <tr>
-            <td>2.das Zimmer</td>
-            <td>room</td>
+            <td>2.die Butter</td>
+            <td>butter</td>
           </tr>
           <tr>
-            <td>3.das Bad</td>
-            <td>bathroom</td>
+            <td>3.das Brötchen</td>
+            <td>bun</td>
           </tr>
           <tr>
-            <td>4.das Fenster</td>
-            <td>window</td>
+            <td>4.der Joghurt</td>
+            <td>tiger</td>
           </tr>
           <tr>
-            <td>5.die Küche</td>
-            <td>kitchen</td>
+            <td>5.der Käse</td>
+            <td>cheese</td>
           </tr>
           <tr>
-            <td>6.die Treppe</td>
-            <td>stairs</td>
+            <td>6.die Milch</td>
+            <td>milk</td>
           </tr>
           <tr>
-            <td>7.die Tür</td>
-            <td>door</td>
+            <td>7.das Ei</td>
+            <td>egg</td>
           </tr>
           <tr>
-            <td>8.der Salon</td>
-            <td>living room</td>
+            <td>8.der Pfeffer</td>
+            <td>pepper</td>
           </tr>
           <tr>
-            <td>9.der Balkon</td>
-            <td>balcony</td>
+            <td>9.das Fleisch</td>
+            <td>meat</td>
           </tr>
           <tr>
-            <td>10.die Mutter</td>
-            <td>mother</td>
+            <td>10.das Mehl</td>
+            <td>flour</td>
           </tr>
           <tr>
-            <td>11.die Garage</td>
-            <td>garage</td>
+            <td>11.der Zucker</td>
+            <td>sugar</td>
           </tr>
           <tr>
-            <td>12.der Essraum</td>
-            <td>dining room</td>
+            <td>12.das Salz</td>
+            <td>salt</td>
           </tr>
           <tr>
-            <td>13.das Kabinett</td>
-            <td>study</td>
+            <td>13.die Nudeln</td>
+            <td>pasta</td>
           </tr>
           <tr>
-            <td>14.der Vater</td>
-            <td>father</td>
+            <td>14.die Tomate</td>
+            <td>tomato</td>
           </tr>
         </tbody>
       </table>
@@ -112,61 +112,61 @@ function HomeFamily() {
   </tr>
 </thead>
         <tbody>
-        <tr>
-            <td>15.die Familie</td>
-            <td>family</td>
+          <tr>
+            <td>15.der Fisch</td>
+            <td>fish</td>
           </tr>
           <tr>
-            <td>16.die Schwester</td>
-            <td>sister</td>
+            <td>16.die Gurke</td>
+            <td>cucumber</td>
           </tr>
           <tr>
-            <td>17.das Kind</td>
-            <td>children</td>
+            <td>17.die Kartoffel</td>
+            <td>potato</td>
           </tr>
           <tr>
-            <td>18.der Bruder</td>
-            <td>brother</td>
+            <td>18.der Reis</td>
+            <td>rice</td>
           </tr>
           <tr>
-            <td>19.der Opa</td>
-            <td>grandpa</td>
+            <td>19.die Karotte</td>
+            <td>carrot</td>
           </tr>
           <tr>
-            <td>20.der Schrank</td>
-            <td>wardrobe</td>
+            <td>20.der Paprika</td>
+            <td>pepper</td>
           </tr>
           <tr>
-            <td>21.die Adoption</td>
-            <td>adoption</td>
+            <td>21.der Apfel</td>
+            <td>apple</td>
           </tr>
           <tr>
-            <td>22.die Tante</td>
-            <td>aunt</td>
+            <td>22.die Nuss</td>
+            <td>nut</td>
           </tr>
           <tr>
-            <td>23.der Onkel</td>
-            <td>uncle</td>
+            <td>23.die Traube</td>
+            <td>grape</td>
           </tr>
           <tr>
-            <td>24.das Ehepaar</td>
-            <td>marriage</td>
+            <td>24.die Zitrone</td>
+            <td>lemon</td>
           </tr>
           <tr>
-            <td>25.die Beziehung</td>
-            <td>couple</td>
+            <td>25.der Salat</td>
+            <td>salad</td>
           </tr>
           <tr>
-            <td>26.der Cousin</td>
-            <td>cousine</td>
+            <td>26.der Saft</td>
+            <td>juice</td>
           </tr>
           <tr>
-            <td>27.die Oma</td>
-            <td>grandma</td>
+            <td>27.das Eis</td>
+            <td>ice cream</td>
           </tr>
           <tr>
-            <td>28. der Götti</td>
-            <td>godmother</td>
+            <td>28.das Wasser</td>
+            <td>water</td>
           </tr>
         </tbody>
       </table>
@@ -176,7 +176,7 @@ function HomeFamily() {
     <p><DriveFileRenameOutlineIcon/> Put your knowledge to the test!</p>
     </div>
     <div className="tests-container2">
-    <Link to='./home-family-test'>
+    <Link to='./grocery-test'>
     <p>Test</p>
     </Link>
     </div>
@@ -186,4 +186,4 @@ function HomeFamily() {
   );
 }
 
-export default HomeFamily
+export default Grocery

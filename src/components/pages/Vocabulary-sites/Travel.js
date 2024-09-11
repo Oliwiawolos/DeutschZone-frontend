@@ -1,13 +1,13 @@
 import React from 'react'
-import travelVoc from '../../images/travel-voc.png'
+import travelVoc from '../../images/Travel.png'
 import './Vocabulary-sites.css'
 import united from '../../images/united.png'
 import german from '../../images/german.png'
 import Footer from '../../Footer'
 import {Link} from 'react-router-dom';
-import Test from './Animalstest'
+import './Traveltest'
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
-function Animals() {
+function Travel() {
   return (
     <>
       <div className="vocabulary-container">
@@ -36,47 +36,47 @@ function Animals() {
 </thead>
         <tbody>
           <tr>
-            <td>1. das Flugzeug</td>
+            <td>1.das Flugzeug</td>
             <td>airplane</td>
           </tr>
           <tr>
-            <td>2. der Rucksack</td>
+            <td>2.der Rucksack</td>
             <td>backpack</td>
           </tr>
           <tr>
-            <td>3. das Schloss</td>
+            <td>3.das Schloss</td>
             <td>castle</td>
           </tr>
           <tr>
-            <td>4. der Pass</td>
+            <td>4.der Pass</td>
             <td>passport</td>
           </tr>
           <tr>
-            <td>5. der Pilot</td>
+            <td>5.der Pilot</td>
             <td>pilot</td>
           </tr>
           <tr>
-            <td>6. der Koffer</td>
+            <td>6.der Koffer</td>
             <td>suitcase</td>
           </tr>
           <tr>
-            <td>7. die Rezeption</td>
+            <td>7.die Rezeption</td>
             <td>reception</td>
           </tr>
           <tr>
-            <td>8. der Schlüssel</td>
+            <td>8.der Schlüssel</td>
             <td>key</td>
           </tr>
           <tr>
-            <td>9. das Zimmer</td>
+            <td>9.das Zimmer</td>
             <td>double room</td>
           </tr>
           <tr>
-            <td>10. das Zaichen</td>
+            <td>10.das Zaichen</td>
             <td>sign</td>
           </tr>
           <tr>
-            <td>11. der Reiseführer</td>
+            <td>11.der Reiseführer</td>
             <td>guide</td>
           </tr>
         </tbody>
@@ -101,27 +101,27 @@ function Animals() {
 </thead>
         <tbody>
         <tr>
-            <td>12. die Karte</td>
+            <td>12.die Karte</td>
             <td>map</td>
           </tr>
           <tr>
-            <td>13. das Denkmal</td>
+            <td>13.das Denkmal</td>
             <td>monument</td>
           </tr>
           <tr>
-            <td>14. das Camp</td>
+            <td>14.das Camp</td>
             <td>campsite</td>
           </tr>
           <tr>
-            <td>15. das Ticket</td>
+            <td>15.das Ticket</td>
             <td>ticket</td>
           </tr>
           <tr>
-            <td>16. der Flughafen</td>
+            <td>16.der Flughafen</td>
             <td>airport</td>
           </tr>
           <tr>
-            <td>17. die Währung</td>
+            <td>17.die Währung</td>
             <td>currency</td>
           </tr>
           <tr>
@@ -129,15 +129,15 @@ function Animals() {
             <td>taxi</td>
           </tr>
           <tr>
-            <td>19. die Apotheke</td>
+            <td>19.die Apotheke</td>
             <td>pharmacy</td>
           </tr>
           <tr>
-            <td>20. die Insel</td>
+            <td>20.die Insel</td>
             <td>island</td>
           </tr>
           <tr>
-            <td>21. das Gebirge</td>
+            <td>21.das Gebirge</td>
             <td>mountain</td>
           </tr>
           <tr>
@@ -153,7 +153,7 @@ function Animals() {
     <p><DriveFileRenameOutlineIcon/> Put your knowledge to the test!</p>
     </div>
     <div className="tests-container2">
-    <Link to='./animals-test'>
+    <Link to='./travel-test'>
     <p>Test</p>
     </Link>
     </div>
@@ -163,4 +163,4 @@ function Animals() {
   );
 }
 
-export default Animals
+export default Travel

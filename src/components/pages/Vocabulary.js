@@ -10,7 +10,7 @@ import sports from '../images/sports.avif';
 import travel from '../images/travel.jpeg';
 import vehicles from '../images/vehicles.jpg';
 import weather from '../images/weather.jpg';
-import months from '../images/months.webp';
+import grocery from '../images/grocery.jpg';
 import professions from '../images/professions.jpg';
 import Footer from '../Footer'
 function Vocabulary() {
@@ -74,9 +74,9 @@ function Vocabulary() {
                 path='./body-parts'
                 />
                 <VocabularyItems
-                src={months}
-                text="Months & Days"
-                path='./months-days'
+                src={grocery}
+                text="Grocery"
+                path='./grocery'
                 />
             </ul>
         </div>

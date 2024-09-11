@@ -38,8 +38,18 @@ import Sports from './components/pages/Vocabulary-sites/Sports'
 import Professions from './components/pages/Vocabulary-sites/Professions'
 import Vehicles from './components/pages/Vocabulary-sites/Vehicles'
 import BodyParts from './components/pages/Vocabulary-sites/BodyParts'
-import MonthsDays from './components/pages/Vocabulary-sites/MonthsDays'
+import MonthsDays from './components/pages/Vocabulary-sites/Grocery'
 import Animalstest from './components/pages/Vocabulary-sites/Animalstest';
+import Traveltest from './components/pages/Vocabulary-sites/Traveltest';
+import Clothestest from './components/pages/Vocabulary-sites/Clothestest';
+import Weathertest from './components/pages/Vocabulary-sites/Weathertest';
+import HomeFamilytest from './components/pages/Vocabulary-sites/HomeFamilytest';
+import Sportstest from './components/pages/Vocabulary-sites/Sportstest';
+import Professionstest from './components/pages/Vocabulary-sites/Professionstest';
+import Vehiclestest from './components/pages/Vocabulary-sites/Vehiclestest';
+import BodyPartstest from './components/pages/Vocabulary-sites/BodyPartstest';
+import Grocerytest from './components/pages/Vocabulary-sites/Grocerytest';
+
 function App() {
   return (
     <>
@@ -56,14 +66,23 @@ function App() {
         <Route path='/vocabulary/animals' element={<Animals />} />
         <Route path='/vocabulary/travel' element={<Travel />} />
         <Route path='/vocabulary/clothes' element={<Clothes />} />
-        <Route path='/vocabulary/weather' element={<Animals />} />
+        <Route path='/vocabulary/weather' element={<Weather />} />
         <Route path='/vocabulary/home-family' element={<HomeFamily />} />
         <Route path='/vocabulary/sports' element={<Sports />} />
         <Route path='/vocabulary/professions' element={<Professions />} />
         <Route path='/vocabulary/vehicles' element={<Vehicles />} />
         <Route path='/vocabulary/body-parts' element={<BodyParts/>} />
-        <Route path='/vocabulary/months-days' element={<MonthsDays />} />
+        <Route path='/vocabulary/grocery' element={<MonthsDays />} />
         <Route path='/vocabulary/animals/animals-test' element={<Animalstest />} />
+        <Route path='/vocabulary/travel/travel-test' element={<Traveltest />} />
+        <Route path='/vocabulary/clothes/clothes-test' element={<Clothestest />} />
+        <Route path='/vocabulary/weather/weather-test' element={<Weathertest />} />
+        <Route path='/vocabulary/home-family/home-family-test' element={<HomeFamilytest />} />
+        <Route path='/vocabulary/sports/sports-test' element={<Sportstest />} />
+        <Route path='/vocabulary/professions/professions-test' element={<Professionstest />} />
+        <Route path='/vocabulary/vehicles/vehicles-test' element={<Vehiclestest />} />
+        <Route path='/vocabulary/body-parts/body-parts-test' element={<BodyPartstest />} />
+        <Route path='/vocabulary/grocery/grocery-test' element={<Grocerytest />} />
         <Route path='/listening' element={<Listening />} />
         <Route path="/listening/audio1" element={<AudioPlayer />} />
         <Route path="/listening/audio2" element={<AudioPlayer2 />} />
