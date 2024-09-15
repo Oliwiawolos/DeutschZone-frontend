@@ -72,7 +72,7 @@
     border-bottom: none;
   }
 .nav-links:hover{
-    border-bottom: 4px solid #dac208;
+    border-bottom: 4px solid #ffd700;
     transition: all 0.2s ease-out;
     color: #ad3030;
 }

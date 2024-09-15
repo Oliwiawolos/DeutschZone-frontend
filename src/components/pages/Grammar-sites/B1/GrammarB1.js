@@ -1,9 +1,9 @@
 import React from 'react'
-import './GrammarA1.css'
+import '../A1/GrammarA1.css'
 import {Link} from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Gate from '../images/tower.jpg'
-import Footer from '../Footer'
+import Gate from '../../../images/tower.jpg'
+import Footer from '../../../Footer'
 function GrammarB1() {
   return (
     <>

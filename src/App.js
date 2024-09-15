@@ -4,10 +4,27 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css';
 import Home from './components/Home'
 import Grammar from './components/pages/Grammar';
-import GrammarA1 from './components/pages/GrammarA1';
-import GrammarA2 from './components/pages/GrammarA2';
-import GrammarB1 from './components/pages/GrammarB1';
-import GrammarB2 from './components/pages/GrammarB2';
+import GrammarA1 from './components/pages/Grammar-sites/A1/GrammarA1';
+import VerbConjugation from './components/pages/Grammar-sites/A1/VerbConjugation';
+import Verbtest from './components/pages/Grammar-sites/A1/testsA1/Verbtest';
+import Verbtest2 from './components/pages/Grammar-sites/A1/testsA1/Verbtest2';
+import Seperable from './components/pages/Grammar-sites/A1/Seperable';
+import Seperabletest from './components/pages/Grammar-sites/A1/testsA1/Seperabletest';
+import Inseperabletest from './components/pages/Grammar-sites/A1/testsA1/Inseperabletest';
+import Modal from './components/pages/Grammar-sites/A1/Modal';
+import Modalpasttest from './components/pages/Grammar-sites/A1/testsA1/Modalpasttest';
+import Modaltest from './components/pages/Grammar-sites/A1/testsA1/Modaltest';
+import Negation from './components/pages/Grammar-sites/A1/Negation';
+import Negationtest from './components/pages/Grammar-sites/A1/testsA1/Negationtest';
+import Negationkeintest from './components/pages/Grammar-sites/A1/testsA1/negationkeintest';
+import Question from './components/pages/Grammar-sites/A1/Question';
+import Questiontest from './components/pages/Grammar-sites/A1/testsA1/Questiontest';
+import Question2test from './components/pages/Grammar-sites/A1/testsA1/Question2test';
+import WordOrder from './components/pages/Grammar-sites/A1/WordOrder';
+import Wordtest from './components/pages/Grammar-sites/A1/testsA1/Wordtest';
+import GrammarA2 from './components/pages/Grammar-sites/A2/GrammarA2';
+import GrammarB1 from './components/pages/Grammar-sites/B1/GrammarB1';
+import GrammarB2 from './components/pages/Grammar-sites/B2/GrammarB2';
 import Vocabulary from './components/pages/Vocabulary';
 import Listening from './components/pages/Listening';
 import Texts from './components/pages/Texts';
@@ -58,10 +75,27 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/grammar' element={<Grammar />} />
-        <Route path='/grammar/grammar1' element={<GrammarA1 />} />
-        <Route path='/grammar/grammar2' element={<GrammarA2 />} />
-        <Route path='/grammar/grammar3' element={<GrammarB1 />} />
-        <Route path='/grammar/grammar4' element={<GrammarB2 />} />
+        <Route path='/grammar/A1' element={<GrammarA1 />} />
+        <Route path='/grammar/A1/verb-conjugation' element={<VerbConjugation />} />
+        <Route path='/grammar/A1/verb-conjugation/verb-test' element={<Verbtest />} />
+        <Route path='/grammar/A1/verb-conjugation/verb-test2' element={<Verbtest2 />} />
+        <Route path='/grammar/A1/seperable-verbs' element={<Seperable />} />
+        <Route path='/grammar/A1/seperable-verbs/seperable-test' element={<Seperabletest />} />
+        <Route path='/grammar/A1/seperable-verbs/inseperable-test' element={<Inseperabletest />} />
+        <Route path='/grammar/A1/modal-verbs' element={<Modal />} />
+        <Route path='/grammar/A1/modal-verbs/modal-test' element={<Modaltest />} />
+        <Route path='/grammar/A1/modal-verbs/modal-past-test' element={<Modalpasttest />} />
+        <Route path='/grammar/A1/negation-verbs' element={<Negation />} />
+        <Route path='/grammar/A1/negation-verbs/negation-test' element={<Negationtest />} />
+        <Route path='/grammar/A1/negation-verbs/negation-kein-test' element={<Negationkeintest />} />
+        <Route path='/grammar/A1/question-verbs' element={<Question />} />
+        <Route path='/grammar/A1/question-verbs/question-test' element={<Questiontest />} />
+        <Route path='/grammar/A1/question-verbs/question2-test' element={<Question2test />} />
+        <Route path='/grammar/A1/word-order-verbs' element={<WordOrder />} />
+        <Route path='/grammar/A1/word-order-verbs/word-test' element={<Wordtest />} />
+        <Route path='/grammar/A2' element={<GrammarA2 />} />
+        <Route path='/grammar/B1' element={<GrammarB1 />} />
+        <Route path='/grammar/B2' element={<GrammarB2 />} />
         <Route path='/vocabulary' element={<Vocabulary />} />
         <Route path='/vocabulary/animals' element={<Animals />} />
         <Route path='/vocabulary/travel' element={<Travel />} />

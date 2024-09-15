@@ -16,23 +16,23 @@ function Grammar() {
     <p>No matter if you're a beginner or an advanced learner, our site offers grammar exercises customized for your level. From basic A1 topics to advanced B2 challenges, you can easily find the exercises that match your needs. Take control of your learning, choose your level, and start improving your German grammar skills today!</p>
     <div className='leftSite'>
     <div className='img-container1'>
-    <Link to='/grammar/grammar1'>
+    <Link to='./A1'>
       <img src={Zdjgrammar1} alt="Zdjgrammar1" />
     </Link>
     </div>
     <div className='img-container2'>
-    <Link to='/grammar/grammar2'>
+    <Link to='./A2'>
       <img src={Zdjgrammar3} alt="Zdjgrammar3" />
     </Link>
     </div>
     <div className='rightSite'>
     <div className='img-container3'>
-    <Link to='/grammar/grammar3'>
+    <Link to='./B1'>
       <img src={Zdjgrammar2} alt="Zdjgrammar2" />
     </Link>
     </div>
     <div className='img-container4'>
-    <Link to='/grammar/grammar4'>
+    <Link to='./B2'>
       <img src={Zdjgrammar4} alt="Zdjgrammar4" />
     </Link>
     </div>

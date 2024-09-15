@@ -23,11 +23,6 @@
     margin-bottom:1%;
 }
 
-.tests-container p{
-    padding-top: 18%;
-    display:flex;
-    margin-left:-63%;
-}
 .vocabulary-container p{
     font-size: 1.3rem;
     margin-top:2%;
@@ -45,22 +40,33 @@
   }
   .tests-container{
     margin-top:5%;
+    width: 100%; 
+    display: flex;
+    justify-content: flex-start;
     
   }
   .tests-container p{
     margin-top:-14%;
     color: rgb(0,0,0);
-    margin-left:-47%;
     display: inline-block;
     border-bottom: 3px solid #ad3030;
+    padding-top: 18%;
+    display:flex;
+    text-align: left; 
+  }
+  .tests-container2{
+    width: 100%; 
+    display: flex;
+    justify-content: flex-start;
+    
   }
   .tests-container2 p{
     color: rgb(0,0,0);
     border-bottom: 3px solid rgb(0,0,0);
-    margin-left:-670%;
     margin-top:29%;
     display: inline-block;
     text-decoration: none;
+    text-align: left; 
   }
   .table th,
   .table td {
