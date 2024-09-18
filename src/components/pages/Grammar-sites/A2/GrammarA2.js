@@ -15,7 +15,7 @@ function GrammarA2() {
       </p>
       <div className="grid-container">
       <div className="a1-item">
-        <Link to='/'>
+        <Link to='./conjunctions'>
         <h3>
         Conjunctions<ArrowForwardIosIcon className="small-icon" />
         </h3>
@@ -23,7 +23,7 @@ function GrammarA2() {
         <p>Learn how to connect sentences and ideas more fluently using conjunctions.Mastering conjunctions allows you to create more complex and nuanced sentences in your communication.</p>
       </div>
       <div className="a1-item">
-        <Link to='/'>
+        <Link to='./imperative-mood'>
         <h3>
         Imperative Mood<ArrowForwardIosIcon className="small-icon" />
         </h3>
@@ -31,7 +31,7 @@ function GrammarA2() {
         <p>Discover how to give instructions, make requests, and give advice using the imperative form.</p>
       </div>
       <div className="a1-item">
-        <Link to='/'>
+        <Link to='./personal-pronouns'>
         <h3>
         Personal Pronouns<ArrowForwardIosIcon className="small-icon"/>
         </h3>
@@ -39,7 +39,7 @@ function GrammarA2() {
         <p>Improve your grasp of using personal pronouns (e.g., ich, du, er/sie/es) in more varied contexts.</p>
       </div>
       <div className="a1-item">
-        <Link to='/'>
+        <Link to='./adverbial-clauses'>
         <h3>
         Adverbial clauses<ArrowForwardIosIcon className="small-icon"/>
         </h3>
@@ -47,7 +47,7 @@ function GrammarA2() {
         <p>Learn how to express time, cause, purpose, condition, and more using subordinate clauses.</p>
       </div>
       <div className="a1-item">
-        <Link to='/'>
+        <Link to='./comparsion-forms'>
         <h3>
         Comparsion Forms <ArrowForwardIosIcon className="small-icon"/>
           </h3>
@@ -55,7 +55,7 @@ function GrammarA2() {
         <p>Express comparisons and superlative degrees to describe people, objects, and situations in greater detail.</p>
       </div>
       <div className="a1-item">
-        <Link>
+        <Link to='./reflexive-verbs'>
         <h3>
         Reflexive Verbs<ArrowForwardIosIcon className="small-icon"/>
         </h3>
@@ -63,15 +63,15 @@ function GrammarA2() {
         <p>Explore reflexive verbs and how to use them to express actions that one does to oneself, such as "sich freuen" and "sich ärgern."</p>
       </div>
       <div className="a1-item">
-        <Link>
+        <Link to='./future-tense'>
         <h3>
-        Future Tense <ArrowForwardIosIcon className="small-icon"/>
+        Future Tenses <ArrowForwardIosIcon className="small-icon"/>
         </h3>
         </Link>
         <p> Discuss plans and future actions confidently by mastering the future tense.This tense is particularly useful when you want to emphasize that something will happen in the future rather than right now.</p>
       </div>
       <div className="a1-item">
-        <Link>
+        <Link to='./lassen'>
         <h3>
         "Lassen" <ArrowForwardIosIcon className="small-icon"/>
         </h3>
@@ -79,7 +79,7 @@ function GrammarA2() {
         <p> Learn how to use the versatile verb "lassen," which is key to expressing actions done by someone else or giving permission.</p>
       </div>
       <div className="a1-item">
-        <Link>
+        <Link to='./possessive-pronouns'>
         <h3>
         Possessive Pronouns  <ArrowForwardIosIcon className="small-icon"/>
         </h3>
@@ -87,9 +87,9 @@ function GrammarA2() {
         <p> Understand how to show ownership and relationships in sentences by using pronouns.</p>
       </div>
       <div className="a1-item">
-        <Link>
+        <Link to='./perfekt'>
         <h3>
-        Present Perfect Tense <ArrowForwardIosIcon className="small-icon"/>
+        Past Tense: Perfekt <ArrowForwardIosIcon className="small-icon"/>
         </h3>
         </Link>
         <p> Learn how to talk about past events using the present perfect tense, an essential tool for everyday conversation. </p>

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import './testsA1.css';
+import '../../A1/testsA1/testsA1.css';
 import Footer from '../../../../Footer'
-function Questiontest() {
+function Reflexivetest() {
   const sentences = [
-    { text: 'neue/kommt/der/der/Lehrer/in/Woher/Schule/?', verb: '', correctAnswer: 'Woher kommt der neue Lehrer in der Schule?' },
-    { text: 'dieses/Wozu/dient/im/Gerät/Labor/?', verb: '', correctAnswer: 'Wozu dient dieses Gerät im Labor?' },
-    { text: 'gute/Wo/eine/Pizzeria/kann/finden/ich/?', verb: '', correctAnswer: 'Wo kann ich eine gute Pizzeria finden?' },
-    { text: 'Auto/Parkplatz/auf/Wessen/dem/steht/?', verb: '', correctAnswer: 'Wessen Auto steht auf dem Parkplatz?' },
-    { text: 'neue/Suppe/schmeckt/die/in/Wie/Restaurant/diesem/?', verb: '', correctAnswer: 'Wie schmeckt die neue Suppe in diesem Restaurant?' },
-    { text: 'in/Warum/ihr/wollt/umziehen/diese/Stadt/?', verb: '', correctAnswer: 'Warum wollt ihr in diese Stadt umziehen?' },
-    { text: 'nächste/Wo/ich//U-Bahn-Station/finde/die/?', verb: '', correctAnswer: 'Wo finde ich die nächste U-Bahn-Station?' },
-    { text: 'Geld/Warum/du/brauchst/das/?', verb: '', correctAnswer: 'Warum brauchst du das Geld?' },
-    { text: 'dem/Schlüssel/liegen/auf/Wessen/Tisch/?', verb: '', correctAnswer: 'Wessen Schlüssel liegen auf dem Tisch?' },
-    { text: 'läuft/Film/Abend/am/im/Welcher/Kino/?', verb: '', correctAnswer: 'Welcher Film läuft am Abend im Kino?' },
+    { text: 'Herr Müller ___ auf den Stuhl.', verb: 'sich setzen', correctAnswer: 'setzt sich' },
+    { text: 'Du ___ nicht gut', verb: 'sich fühlen', correctAnswer: 'fühlst dich' },
+    { text: 'Ihr ___ über das Wetter', verb: 'sich unterhalten', correctAnswer: 'unterhaltet euch' },
+    { text: 'Wir ___ nur selten', verb: 'sich verspäten', correctAnswer: 'verspäten uns' },
+    { text: 'Das ___ überhaupt nicht', verb: 'sich lohnen', correctAnswer: 'lohnt sich' },
+    { text: 'Ich ___ für Musik', verb: 'sich interessieren', correctAnswer: 'interessiere mich' },
+    { text: 'Wir ___ jeden Tag', verb: 'sich waschen', correctAnswer: 'waschen uns' },
+    { text: 'Die Weichsel ___ in Polen', verb: 'sich befinden', correctAnswer: 'befindet sich' },
+    { text: 'Ich ___ die Haare', verb: 'sich kämmen', correctAnswer: 'kämme mir' },
+    { text: 'Er ___ bei seinen Eltern', verb: 'sich entschuldigen', correctAnswer: 'entschuldigt sich' },
   ];
 
   const [answers, setAnswers] = useState(Array(sentences.length).fill(''));
@@ -29,11 +29,16 @@ function Questiontest() {
   const checkAnswers = () => {
     if (!isChecked) {
       const result = answers.map((answer, index) => {
-        const isCorrect = answer === sentences[index].correctAnswer;
+        const isCorrect = Array.isArray(sentences[index].correctAnswer)
+          ? sentences[index].correctAnswer.some(
+              (correctAnswer) => answer.toLowerCase() === correctAnswer.toLowerCase()
+            )
+          : answer.toLowerCase() === sentences[index].correctAnswer.toLowerCase();
+
         if (isCorrect) {
           savedCorrectAnswers[index] = answer;
         }
-
+        
         return isCorrect;
       });
 
@@ -49,8 +54,8 @@ function Questiontest() {
   return (
     <>
     <div className="exercise-container">
-      <h2>Bilde Fragen aus den angegebenen Wörtern</h2>
-      <p>Form questions from the given words</p>      
+      <h2>Fülle die Lücke aus</h2>
+      <p>Fill in the bank</p>      
       {sentences.map((sentence, index) => (
         <div key={index} className="exercise-item">
           <span className="number">{index + 1}.</span>
@@ -62,7 +67,7 @@ function Questiontest() {
                   <input
                     type="text"
                     className="input-field"
-                    style={{ width: '45%' }}
+                    style={{ width: '35%' }}
                     value={answers[index]}
                     onChange={(e) => handleInputChange(index, e.target.value)}
                   />
@@ -88,4 +93,4 @@ function Questiontest() {
   );
 }
 
-export default Questiontest;
+export default Reflexivetest;

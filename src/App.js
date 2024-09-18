@@ -23,6 +23,27 @@ import Question2test from './components/pages/Grammar-sites/A1/testsA1/Question2
 import WordOrder from './components/pages/Grammar-sites/A1/WordOrder';
 import Wordtest from './components/pages/Grammar-sites/A1/testsA1/Wordtest';
 import GrammarA2 from './components/pages/Grammar-sites/A2/GrammarA2';
+import Conjunctions from './components/pages/Grammar-sites/A2/Conjunctions';
+import Conjunctionstest from './components/pages/Grammar-sites/A2/testsA2/Conjunctionstest';
+import ImperativeMood from './components/pages/Grammar-sites/A2/ImperativeMood';
+import Imperativetest from './components/pages/Grammar-sites/A2/testsA2/Imperativetest';
+import PersonalPronouns from './components/pages/Grammar-sites/A2/PersonalPronouns';
+import Personaltest from './components/pages/Grammar-sites/A2/testsA2/Personaltest';
+import AdverbialClauses from './components/pages/Grammar-sites/A2/AdverbialClauses';
+import Adverbialtest from './components/pages/Grammar-sites/A2/testsA2/Adverbialtest';
+import ComparsionForms from './components/pages/Grammar-sites/A2/ComparsionForms';
+import Komperativtest from './components/pages/Grammar-sites/A2/testsA2/Komperativtest';
+import Superlativtest from './components/pages/Grammar-sites/A2/testsA2/Superlativtest';
+import ReflexiveVerbs from './components/pages/Grammar-sites/A2/ReflexiveVerbs';
+import Reflexivetest from './components/pages/Grammar-sites/A2/testsA2/Reflexivetest';
+import FuturTense from './components/pages/Grammar-sites/A2/FuturTense';
+import Futurtest from './components/pages/Grammar-sites/A2/testsA2/Futurtest';
+import PossessivePronouns from './components/pages/Grammar-sites/A2/PossessivePronouns';
+import Possessivetest from './components/pages/Grammar-sites/A2/testsA2/Possessivetest';
+import PresentPerfect from './components/pages/Grammar-sites/A2/PresentPerfect';
+import Presenttest from './components/pages/Grammar-sites/A2/testsA2/Presenttest';
+import Lassen from './components/pages/Grammar-sites/A2/Lassen';
+import Lassentest from './components/pages/Grammar-sites/A2/testsA2/Lassentest';
 import GrammarB1 from './components/pages/Grammar-sites/B1/GrammarB1';
 import GrammarB2 from './components/pages/Grammar-sites/B2/GrammarB2';
 import Vocabulary from './components/pages/Vocabulary';
@@ -94,6 +115,27 @@ function App() {
         <Route path='/grammar/A1/word-order-verbs' element={<WordOrder />} />
         <Route path='/grammar/A1/word-order-verbs/word-test' element={<Wordtest />} />
         <Route path='/grammar/A2' element={<GrammarA2 />} />
+        <Route path='/grammar/A2/conjunctions' element={<Conjunctions />} />
+        <Route path='/grammar/A2/conjunctions/conjunctions-test' element={<Conjunctionstest />} />
+        <Route path='/grammar/A2/imperative-mood' element={<ImperativeMood />} />
+        <Route path='/grammar/A2/imperative-mood/imperative-test' element={<Imperativetest />} />
+        <Route path='/grammar/A2/personal-pronouns' element={<PersonalPronouns />} />
+        <Route path='/grammar/A2/personal-pronouns/personal-test' element={<Personaltest />} />
+        <Route path='/grammar/A2/adverbial-clauses' element={<AdverbialClauses />} />
+        <Route path='/grammar/A2/adverbial-clauses/adverbial-test' element={<Adverbialtest />} />
+        <Route path='/grammar/A2/comparsion-forms' element={<ComparsionForms />} />
+        <Route path='/grammar/A2/comparsion-forms/komperativ-test' element={<Komperativtest />} />
+        <Route path='/grammar/A2/comparsion-forms/superlativ-test' element={<Superlativtest />} />
+        <Route path='/grammar/A2/reflexive-verbs' element={<ReflexiveVerbs />} />
+        <Route path='/grammar/A2/reflexive-verbs/reflexive-test' element={<Reflexivetest />} />
+        <Route path='/grammar/A2/future-tense' element={<FuturTense />} />
+        <Route path='/grammar/A2/future-tense/futur-test' element={<Futurtest />} />
+        <Route path='/grammar/A2/lassen' element={<Lassen />} />
+        <Route path='/grammar/A2/lassen/lassen-test' element={<Lassentest />} />
+        <Route path='/grammar/A2/possessive-pronouns' element={<PossessivePronouns />} />
+        <Route path='/grammar/A2/possessive-pronouns/possessive-test' element={<Possessivetest />} />
+        <Route path='/grammar/A2/perfekt' element={<PresentPerfect />} />
+        <Route path='/grammar/A2/perfekt/perfekt-test' element={<Presenttest />} />
         <Route path='/grammar/B1' element={<GrammarB1 />} />
         <Route path='/grammar/B2' element={<GrammarB2 />} />
         <Route path='/vocabulary' element={<Vocabulary />} />

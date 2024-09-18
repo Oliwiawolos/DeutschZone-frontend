@@ -53,7 +53,7 @@ function Wordtest() {
   };
   return (
     <>
-    <div className="exercise-container">
+    <div className="exercise-container" style={{width:'70%'}}>
       <h2>Bilde Sätze aus den angegebenen Wörtern</h2>
       <p>Form sentences from the given words</p>      
       {sentences.map((sentence, index) => (
@@ -67,7 +67,7 @@ function Wordtest() {
                   <input
                     type="text"
                     className="input-field"
-                    style={{ width: '65%' }}
+                    style={{ width: '55%' }}
                     value={answers[index]}
                     onChange={(e) => handleInputChange(index, e.target.value)}
                   />
