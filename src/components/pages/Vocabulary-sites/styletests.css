@@ -62,4 +62,10 @@
     align-items: center;
     width: 100%;
   }
+  .texts-container .custom-button{
+    background-color: black;
+    margin-bottom: 6%;
+    width: 50%;
+    margin-left: 20;
+  }
   

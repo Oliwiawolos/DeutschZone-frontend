@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Logo from './images/logo.png'
+import { auth } from "./FirebaseConfig"; 
 import './Navbar.css'
 import {Button} from './Button'
 import DensityLargeIcon from '@mui/icons-material/DensityLarge';
 import CloseIcon from '@mui/icons-material/Close';
+import { onAuthStateChanged, signOut } from "firebase/auth";
 function Navbar() {
   const [click, setClick]=useState(false);
   const [button, setButton]=useState(true);
+  const [currentUser, setCurrentUser] = useState(null); 
+  const navigate = useNavigate();
   const handleClick= () => setClick(!click);
   const closeMobileMenu=() => setClick(false);
 
@@ -27,6 +31,27 @@ function Navbar() {
       window.removeEventListener('resize', showButton);
     };
   }, []);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setCurrentUser(user); 
+      } else {
+        setCurrentUser(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setCurrentUser(null);
+      closeMobileMenu(); 
+      navigate('/login'); 
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
   return (
     <>
       <nav className="navbar">
@@ -70,13 +95,18 @@ function Navbar() {
 
                 </li>
                 <li className='nav-item1'>
-                  <Link to='/sign-up' className='nav-links signup-link' onClick={closeMobileMenu}>
-                  
-                  <Button buttonStyle='btn--outline'>
-                    Sign Up
-                    </Button>
-                  </Link>
-                </li>
+  {currentUser ? (
+    <Button buttonStyle='btn--outline' style= {{marginTop: '16%', marginLeft: '5%'}} onClick={handleLogout}>
+      Logout
+    </Button>
+  ) : (
+    <Link to='/login' className='nav-links signup-link' onClick={closeMobileMenu}>
+      <Button buttonStyle='btn--outline'>Login</Button>
+    </Link>
+  )}
+</li>
+
+
             </ul>
         </div>
       </nav>

@@ -47,12 +47,12 @@ function PersonalPronouns() {
         <table>
         <thead>
           <tr>
-            <th style={{ textAlign: 'center' }}>Nominativ</th>
+            <th style={{ textAlign: 'center' }}></th>
             <th style={{ textAlign: 'center' }}>Akkusativ</th>
             <th style={{ textAlign: 'center' }} >Dativ</th>
           </tr>
           <tr>
-            <td style={{ textAlign: 'center' }}>Who? What?</td>
+            <td style={{ textAlign: 'center' }}></td>
             <td style={{ textAlign: 'center' }}>Whom? What?</td>
             <td style={{ textAlign: 'center' }}>To whom? To what?</td>
           </tr>

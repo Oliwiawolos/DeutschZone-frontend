@@ -33,7 +33,7 @@
 }
 .listening-A1 a{
     color: rgb(0,0,0);
-    display: block; /* Makes each link occupy its own line */
+    display: block; 
   margin: 2% 0;
 }
 .A1-li1{

@@ -56,7 +56,7 @@
 }
 @media (max-width: 768px) {
 .Vocabulary_item {
-    flex: 0 1 100%; /* Stacks items vertically on smaller screens */
+    flex: 0 1 100%; 
     margin: 10px 0;
 }
 }

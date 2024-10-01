@@ -49,7 +49,7 @@ function GrammarB1() {
       <div className="a1-item">
         <Link to='/'>
         <h3>
-        Simple Past<ArrowForwardIosIcon className="small-icon"/>
+        Past Tense: Präteritum<ArrowForwardIosIcon className="small-icon"/>
           </h3>
         </Link>
         <p>Focus on the simple past tense (Präteritum) for narrating events and actions, particularly in written language and storytelling.</p>

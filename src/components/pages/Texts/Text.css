@@ -30,9 +30,10 @@
     margin-top: 1%;
   }
   .text-container1 .custom-button {
-    margin-left: 38%;
     background-color: black;
     margin-bottom: 6%;
+    width: 50%;
+    margin-left: 25%;
   }
   .text-container1 .custom-button:hover {
     color: #ad3030;

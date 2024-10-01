@@ -1,4 +1,3 @@
-// Animalstest.js
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';

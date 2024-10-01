@@ -45,6 +45,26 @@ import Presenttest from './components/pages/Grammar-sites/A2/testsA2/Presenttest
 import Lassen from './components/pages/Grammar-sites/A2/Lassen';
 import Lassentest from './components/pages/Grammar-sites/A2/testsA2/Lassentest';
 import GrammarB1 from './components/pages/Grammar-sites/B1/GrammarB1';
+import AdjectiveDeclension from './components/pages/Grammar-sites/B1/AdjectiveDeclension';
+import ADeclensiontest from './components/pages/Grammar-sites/B1/testsB1/ADeclensiontest';
+import IndirectQuestions from './components/pages/Grammar-sites/B1/IndirectQuestions';
+import Indirecttest from './components/pages/Grammar-sites/B1/testsB1/Indirecttest';
+import InfinitiveClauses from './components/pages/Grammar-sites/B1/InfinitiveClauses';
+import Infinitivetest from './components/pages/Grammar-sites/B1/testsB1/Infinitivetest';
+import PassiveVoice from './components/pages/Grammar-sites/B1/PassiveVoice';
+import Passivetest from './components/pages/Grammar-sites/B1/testsB1/Passivetest';
+import Präteritum from './components/pages/Grammar-sites/B1/Präteritum';
+import Präteritumtest from './components/pages/Grammar-sites/B1/testsB1/Präteritumtest';
+import Prepositions from './components/pages/Grammar-sites/B1/Prepositions';
+import Prepositionstest from './components/pages/Grammar-sites/B1/testsB1/Prepositionstest';
+import Genitiv from './components/pages/Grammar-sites/B1/Genitiv';
+import Genitivtest from './components/pages/Grammar-sites/B1/testsB1/Genitivtest';
+import RelativePronouns from './components/pages/Grammar-sites/B1/RelativePronouns';
+import RelativePronounstest from './components/pages/Grammar-sites/B1/testsB1/RelativePronounstest';
+import TwoConjunctions from './components/pages/Grammar-sites/B1/TwopartConjunctions';
+import TwoConjunctionstest from './components/pages/Grammar-sites/B1/testsB1/TwoConjunctionstest';
+import VerbValency from './components/pages/Grammar-sites/B1/VerbValency';
+import VerbValencytest from './components/pages/Grammar-sites/B1/testsB1/VerbValencytest';
 import GrammarB2 from './components/pages/Grammar-sites/B2/GrammarB2';
 import Vocabulary from './components/pages/Vocabulary';
 import Listening from './components/pages/Listening';
@@ -87,14 +107,20 @@ import Professionstest from './components/pages/Vocabulary-sites/Professionstest
 import Vehiclestest from './components/pages/Vocabulary-sites/Vehiclestest';
 import BodyPartstest from './components/pages/Vocabulary-sites/BodyPartstest';
 import Grocerytest from './components/pages/Vocabulary-sites/Grocerytest';
-
+import Flashcards from './components/pages/Flashcards';
+import { AuthProvider } from './components/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
+import Login from './components/pages/Login';
+import Registration from './components/pages/Registration'
 function App() {
   return (
     <>
     <Router>
+      <AuthProvider>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
+      <Route path="/" element={<Home />} />
+        
         <Route path='/grammar' element={<Grammar />} />
         <Route path='/grammar/A1' element={<GrammarA1 />} />
         <Route path='/grammar/A1/verb-conjugation' element={<VerbConjugation />} />
@@ -137,6 +163,26 @@ function App() {
         <Route path='/grammar/A2/perfekt' element={<PresentPerfect />} />
         <Route path='/grammar/A2/perfekt/perfekt-test' element={<Presenttest />} />
         <Route path='/grammar/B1' element={<GrammarB1 />} />
+        <Route path='/grammar/B1/adjective-declension' element={<AdjectiveDeclension />} />
+        <Route path='/grammar/B1/adjective-declension/adjective-declension-test' element={<ADeclensiontest />} />
+        <Route path='/grammar/B1/genitiv' element={<Genitiv/>} />
+        <Route path='/grammar/B1/genitiv/genitiv-test' element={<Genitivtest />} />
+        <Route path='/grammar/B1/indirect-questions' element={<IndirectQuestions />} />
+        <Route path='/grammar/B1/indirect-questions/indirect-questions-test' element={<Indirecttest />} />
+        <Route path='/grammar/B1/infinitive' element={<InfinitiveClauses />} />
+        <Route path='/grammar/B1/infinitive/infinitive-test' element={<Infinitivetest />} />
+        <Route path='/grammar/B1/passive' element={<PassiveVoice/>} />
+        <Route path='/grammar/B1/passive/passive-test' element={<Passivetest />} />
+        <Route path='/grammar/B1/präteritum' element={<Präteritum/>} />
+        <Route path='/grammar/B1/präteritum/präteritum-test' element={<Präteritumtest />} />
+        <Route path='/grammar/B1/prepositions' element={<Prepositions/>} />
+        <Route path='/grammar/B1/prepositions/prepositions-test' element={<Prepositionstest />} />
+        <Route path='/grammar/B1/relative-pronouns' element={<RelativePronouns/>} />
+        <Route path='/grammar/B1/relative-pronouns/relative-pronouns-test' element={<RelativePronounstest />} />
+        <Route path='/grammar/B1/two-conjunctions' element={<TwoConjunctions />} />
+        <Route path='/grammar/B1/two-conjunctions/two-conjunctions-test' element={<TwoConjunctionstest />} />
+        <Route path='/grammar/B1/verb-valency' element={<VerbValency/>} />
+        <Route path='/grammar/B1/verb-valency/verb-valency-test' element={<VerbValencytest />} />
         <Route path='/grammar/B2' element={<GrammarB2 />} />
         <Route path='/vocabulary' element={<Vocabulary />} />
         <Route path='/vocabulary/animals' element={<Animals />} />
@@ -179,7 +225,11 @@ function App() {
         <Route path='/texts/text8' element={<Text8 />} />
         <Route path='/texts/text9' element={<Text9 />} />
         <Route path='/texts/text10' element={<Text10 />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Registration />} />
+        <Route path="/flashcards" element={<Flashcards />} />
       </Routes>
+      </AuthProvider>
       </Router>
     </>
   );

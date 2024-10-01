@@ -34,9 +34,10 @@
   margin-top:5%;
 }
 .AudioPlayer-container .custom-button {
-  margin-left: 38%;
   background-color: black;
   margin-bottom: 6%;
+  width: 50%;
+  margin-left: 25%;
 }
 .AudioPlayer-container .custom-button:hover {
   color: #ad3030;

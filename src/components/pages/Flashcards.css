@@ -1,0 +1,27 @@
+.flashcards-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    flex-direction: column;  
+    height: 100vh;            
+    width: 100vw;            
+    text-align: center;  
+  }
+  
+  .cards_items {
+    list-style: none; 
+  }
+  .cards_items p{
+    margin-top: 6%;
+    font-size: 16px;
+    padding-bottom:6%;
+  }
+  .cards_items h2{
+    margin-top: 6%;
+    padding-bottom:6%;
+  }
+
+  .cards_items img {
+    display: block;
+  }
+  

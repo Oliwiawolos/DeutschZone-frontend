@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 .navbar-logo2 .title {
-    font-size: 1.5rem ; /* Forces the font size */
+    font-size: 1.5rem ; 
     margin-left: 0.5rem;
     color: white;
         display: flex;
