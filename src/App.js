@@ -109,9 +109,9 @@ import BodyPartstest from './components/pages/Vocabulary-sites/BodyPartstest';
 import Grocerytest from './components/pages/Vocabulary-sites/Grocerytest';
 import Flashcards from './components/pages/Flashcards';
 import { AuthProvider } from './components/AuthContext';
-import PrivateRoute from './components/PrivateRoute';
 import Login from './components/pages/Login';
 import Registration from './components/pages/Registration'
+import Folder from './components/pages/Folders'
 function App() {
   return (
     <>
@@ -120,7 +120,6 @@ function App() {
       <Navbar />
       <Routes>
       <Route path="/" element={<Home />} />
-        
         <Route path='/grammar' element={<Grammar />} />
         <Route path='/grammar/A1' element={<GrammarA1 />} />
         <Route path='/grammar/A1/verb-conjugation' element={<VerbConjugation />} />
@@ -227,9 +226,10 @@ function App() {
         <Route path='/texts/text10' element={<Text10 />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Registration />} />
-        <Route path="/flashcards" element={<Flashcards />} />
+        <Route path='/flashcards' element={<Flashcards />} />
+        <Route path='/folders' element={<Folder />} />
       </Routes>
-      </AuthProvider>
+      </AuthProvider>  
       </Router>
     </>
   );

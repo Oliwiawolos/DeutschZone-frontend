@@ -101,7 +101,7 @@ function Navbar() {
     </Button>
   ) : (
     <Link to='/login' className='nav-links signup-link' onClick={closeMobileMenu}>
-      <Button buttonStyle='btn--outline'>Login</Button>
+      <Button buttonStyle='btn--outline' to='/login'>Login</Button> 
     </Link>
   )}
 </li>

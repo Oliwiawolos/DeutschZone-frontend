@@ -1,0 +1,74 @@
+.folder-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 1%;
+}
+.folder-container h1{
+    color: black;
+    margin-top: 0%;
+    margin-bottom: 3%;
+}
+.folder-input {
+    width: 100%;
+    text-align: center;
+    padding: 1.2%;
+    border-radius: 8px; 
+    border: 2px solid #ccc; 
+    color: #000;
+    font-size: 1.2rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease; 
+}
+.inputs-container{
+    margin-top: 2%;
+    margin-left: -29.5%;
+}
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 150%;
+}
+
+.inputs-number {
+    font-size: 1.6rem;
+    padding-left: 1%;
+}
+
+.text-input, .text-def-input {
+    width: 200%; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 2%;
+    margin-left: 5%;
+}
+.text-def-input{
+    margin-right: 10px; 
+}
+
+.delete-flashcard-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 2% ;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.delete-flashcard-btn:hover {
+    background-color: #c0392b;
+}
+.add-flashcard-btn{
+    background-color: #ffd700;
+}
+.save-folder-btn{
+    background-color: #ffd700;
+}

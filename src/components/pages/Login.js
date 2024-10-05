@@ -15,6 +15,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isOnline, setIsOnline] = useState(navigator.onLine); 
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -84,9 +85,26 @@ const Login = () => {
   };
   
   
+  useEffect(() => {
+    const handleOnlineStatus = () => setIsOnline(navigator.onLine);
+
+    window.addEventListener('online', handleOnlineStatus);
+    window.addEventListener('offline', handleOnlineStatus);
+
+    return () => {
+      window.removeEventListener('online', handleOnlineStatus);
+      window.removeEventListener('offline', handleOnlineStatus);
+    };
+  }, []);
+
+  if (!isOnline) {
+    return <div className="error-message">Internet connection lost. Please check your connection.</div>;
+  }
+
   if (loading) {
     return <p>Loading...</p>;
   }
+
   if (!currentUser) {
     return (
     <>

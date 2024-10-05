@@ -65,3 +65,8 @@ video{
     margin-right:53%;
     margin-top: 10%;
   }
+  @media screen and (max-width: 768px) {
+    .home-container{
+        width: 98%;
+    }
+}

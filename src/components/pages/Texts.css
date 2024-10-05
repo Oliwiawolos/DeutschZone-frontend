@@ -45,3 +45,12 @@
 .A2-align{
     margin-top: 4%;
 }
+@media screen and (max-width: 768px) {
+    .text-container{
+        width: 98%;
+    }
+    .A1-align{
+            width: 95%;
+
+    }
+}
