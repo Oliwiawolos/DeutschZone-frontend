@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# DeutschZone
+- [General Info](#general-info)
+- [Technologies Used](#technologies-used)
+- [Installation and Setup](#installation-and-setup)
+- [Example usage scenario](#example-usage-scenario)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## General Info
+DeutschZone is a web platform dedicated to facilitating the effective learning of the German language. The platform provides a complete set  of educational tools, including flashcards, grammar tutorials, vocabulary exercises, and listening practice, all designed to enhance the language acquisition process. 
 
-## Available Scripts
+### Technologies Used
+* React JS
+* CSS
+* Firebase
+* Git  
+* HTML
+* SQL
 
-In the project directory, you can run:
+### Installation and Setup
+1. Clone the repository: `git clone https://github.com/Oliwiawolos/DeutschZone`
+2. Navigate to the project’s root directory
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open the app in your browser at [http://localhost:3000](http://localhost:3000)
 
-### `npm start`
+## Example usage scenario
+#### Create a new user and log in
+To start using the DeutschZone platform, the user must first register a new account. They can navigate to the registration page and submit their credentials to create a new account.
+After successful registration, the user logs in with their credentials. Upon logging in, they receive a JWT token which grants access to all secured content across the platform.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Use the functionalities
+#### Grammar
+To improve your grammar skills, head over to the Grammar section. Select your current level (A1, A2, B1, B2) and start practicing with tailored grammar exercises.
+Each level focuses on essential grammatical topics, such as verb conjugation, modal verbs, and word order, helping you advance your understanding of the language.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Vocabulary
+If you want to expand your vocabulary, go to the Vocabulary section. Browse through themed vocabulary sets, such as animals, food, places, and many more.
+After learning new words, you can take quizzes to test your retention and reinforce what you've learned.
 
-### `npm test`
+#### Listening
+Suppose you want to practice your listening skills. Navigate to the Listening section, select your level, and choose an audio exercise.
+Play the audio and answer the comprehension questions that follow to test your understanding.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Texts
+If you’re looking to improve your reading skills, head to the Texts section. Choose a text from your current level (A1, A2, B1, B2), read the passage, and complete the accompanying quiz to check your comprehension.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Flashcards
+Want to customize your learning? Head to the Flashcards section and create a new folder.
+You can then add new flashcards by entering terms and their definitions. Once saved, you can review them and test yourself on important vocabulary or grammar.
