@@ -25,7 +25,7 @@ DeutschZone is a web platform dedicated to facilitating the effective learning o
 ## Example usage scenario
 #### Create a new user and log in
 To start using the DeutschZone platform, the user must first register a new account. They can navigate to the registration page and submit their credentials to create a new account.
-After successful registration, the user logs in with their credentials. Upon logging in, they receive a JWT token which grants access to all secured content across the platform.
+After successful registration, the user logs in with their credentials. Upon logging in we have access to all secured content across the platform.
 
 ### Use the functionalities
 #### Grammar
