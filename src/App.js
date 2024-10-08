@@ -107,11 +107,13 @@ import Professionstest from './components/pages/Vocabulary-sites/Professionstest
 import Vehiclestest from './components/pages/Vocabulary-sites/Vehiclestest';
 import BodyPartstest from './components/pages/Vocabulary-sites/BodyPartstest';
 import Grocerytest from './components/pages/Vocabulary-sites/Grocerytest';
-import Flashcards from './components/pages/Flashcards';
+import Flashcards from './components/pages/Flashcard-sites/Flashcards';
 import { AuthProvider } from './components/AuthContext';
 import Login from './components/pages/Login';
-import Registration from './components/pages/Registration'
-import Folder from './components/pages/Folders'
+import Registration from './components/pages/Registration';
+import Folder from './components/pages/Flashcard-sites/Folders';
+import FolderDetail from './components/pages/Flashcard-sites/FolderDetail';
+import FlashcardView from './components/pages/Flashcard-sites/FlashcardView'
 function App() {
   return (
     <>
@@ -228,6 +230,8 @@ function App() {
         <Route path='/register' element={<Registration />} />
         <Route path='/flashcards' element={<Flashcards />} />
         <Route path='/folders' element={<Folder />} />
+        <Route path="/FolderDetail/:id" element={<FolderDetail />} />
+        <Route path="/view-folder/:id" element={<FlashcardView />} />
       </Routes>
       </AuthProvider>  
       </Router>

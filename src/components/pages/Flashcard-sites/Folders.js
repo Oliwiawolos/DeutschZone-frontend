@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Folders.css';
 import {useNavigate} from 'react-router-dom'
-import { db } from '../FirebaseConfig';
+import { db } from '../../FirebaseConfig';
 import { collection, addDoc } from "firebase/firestore";
-import Footer from '../Footer'
+import Footer from '../../Footer'
+import { serverTimestamp } from "firebase/firestore";
+
 const Folders = () => {
   const [flashcards, setFlashcards] = useState([
     { id: 1, term: '', definition: '' },
@@ -32,42 +34,36 @@ const Folders = () => {
   };
 
   const saveFolderToFirebase = () => {
-      console.log("saveFolderToFirebase called!");
-      if (!folderName) {
-          alert("Enter the folder name");
-          return;
-      }
-    const filledFlashcards = flashcards.filter(flashcard => flashcard.term.trim() !== '' && flashcard.definition.trim() !== '');
-
-    if (filledFlashcards.length < 2) {
-          alert("You must have at least 2 flashcards!");
-          return;
+    if (!folderName) {
+      alert("Podaj nazwę folderu");
+      return;
     }
+  
     addDoc(collection(db, 'folders'), {
-        name: folderName
+      name: folderName,
+      createdAt: serverTimestamp()
     })
     .then((folderRef) => {
-        console.log('Folder saved, ID:', folderRef.id);
-
-        const flashcardPromises = flashcards.map(flashcard => 
-            addDoc(collection(db, `folders/${folderRef.id}/flashcards`), {
-                term: flashcard.term,
-                definition: flashcard.definition
-            })
-        );
-
-        return Promise.all(flashcardPromises);
+      console.log('Folder saved, ID:', folderRef.id);
+  
+      const flashcardPromises = flashcards.map(flashcard => 
+        addDoc(collection(db, `folders/${folderRef.id}/flashcards`), {
+          term: flashcard.term,
+          definition: flashcard.definition
+        })
+      );
+  
+      return Promise.all(flashcardPromises);
     })
     .then(() => {
-        console.log('All flashcards saved');
-        alert("The folder and flashcards have been saved!");
-        navigate('/flashcards');
+      console.log('All flashcards saved');
+      alert("Folder i fiszki zostały zapisane!");
+      navigate('/flashcards');
     })
     .catch((error) => {
-        console.error("Error:", error);
+      console.error("Błąd podczas zapisywania fiszek:", error);
     });
-};
-
+  };
 
   return (
     <>

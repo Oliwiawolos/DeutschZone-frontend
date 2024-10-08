@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../AuthContext"; 
-import {Button} from '../Button'
-import login from '../images/login.png';
+import { useAuth } from "../../AuthContext"; 
+import {Button} from '../../Button'
+import login from '../../images/login.png';
 import './Flashcards.css';
-import { db } from '../FirebaseConfig'; 
+import { db } from '../../FirebaseConfig'; 
 import { collection, getDocs } from "firebase/firestore"; 
 import { deleteDoc, doc } from "firebase/firestore"; 
-import Footer from '../Footer'
+import Footer from '../../Footer'
+
 
 const Flashcards = () => {
   const { currentUser } = useAuth();
@@ -28,22 +29,30 @@ const Flashcards = () => {
         try {
           const folderCollection = collection(db, 'folders');
           const folderSnapshot = await getDocs(folderCollection);
-  
+      
           const folderList = await Promise.all(
             folderSnapshot.docs.map(async (doc) => {
               const flashcardsCollection = collection(db, `folders/${doc.id}/flashcards`);
               const flashcardsSnapshot = await getDocs(flashcardsCollection);
-              const flashcardsCount = flashcardsSnapshot.size; 
-  
+              const flashcardsCount = flashcardsSnapshot.size;
+              const data = doc.data();
+              
+              console.log('Folder:', data.name, 'Created at:', data.createdAt); 
+      
               return {
                 id: doc.id,
-                ...doc.data(),
-                flashcardsCount: flashcardsCount, 
+                ...data,
+                flashcardsCount: flashcardsCount,
+                createdAt: data.createdAt 
               };
             })
           );
-  
-          setFolders(folderList);
+      
+          const sortedFolders = folderList.sort((a, b) => {
+            return b.createdAt?.seconds - a.createdAt?.seconds;
+          });
+      
+          setFolders(sortedFolders);
         } catch (error) {
           console.error("Error fetching folders:", error);
         }
@@ -52,6 +61,7 @@ const Flashcards = () => {
       fetchFolders();
     }
   }, [currentUser]);
+  
   
   
   if (!currentUser) {
@@ -81,28 +91,27 @@ const Flashcards = () => {
       </Link>
 
       <div className="folders-container">
-        <p>Here is a list of folders you have created:</p>
-        {folders.length > 0 ? (
-     folders.map((folder) => (
-    <div className="folder-item" key={folder.id}>
-      <h3>{folder.name}</h3>
-      <p>Number of flashcards: {folder.flashcardsCount}</p> 
-      <div className="folder-actions">
-        <Link to={`/folder/${folder.id}`}>
-          <button>Open</button>
-        </Link>
-        <Link to={`/edit-folder/${folder.id}`}>
-          <button>Edit</button>
-        </Link>
-        <button onClick={() => handleDeleteFolder(folder.id)}>Delete</button>
-      </div>
+    <p>Here is a list of folders you have created:</p>
+    {folders.length > 0 ? (
+      folders.map((folder) => (
+        <div className="folder-item" key={folder.id}>
+          <h3>{folder.name}</h3>
+          <p>Number of flashcards: {folder.flashcardsCount}</p>
+          <div className="folder-actions">
+            <Link to={`/FolderDetail/${folder.id}`}>
+              <button>Open</button>
+            </Link>
+            <Link to={`/edit-folder/${folder.id}`}>
+              <button>Edit</button>
+            </Link>
+            <button onClick={() => handleDeleteFolder(folder.id)}>Delete</button>
+          </div>
+        </div>
+      ))
+    ) : (
+      <p>You don't have any folders yet.</p>
+    )}
     </div>
-  ))
-) : (
-  <p>You don't have any folders yet.</p>
-)}
-
-      </div>
     </div>
     <Footer />
     </>
