@@ -25,8 +25,7 @@ function Conjunctionstest() {
     {
       id: 4,
       question: 'Es muss kalt sein, ____ haben wir jetzt Winter.',
-      options: ['schließlich','denn','obowhl',
-      ],
+      options: ['schließlich','denn','obowhl'],
       correctAnswer: 'schließlich',
     },
     {

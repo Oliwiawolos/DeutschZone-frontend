@@ -5,7 +5,7 @@ import united from '../../images/united.png'
 import german from '../../images/german.png'
 import Footer from '../../Footer'
 import {Link} from 'react-router-dom';
-import './BodyPartstest'
+import './tests/BodyPartstest'
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 function BodyParts() {
   return (

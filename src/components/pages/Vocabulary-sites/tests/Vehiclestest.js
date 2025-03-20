@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import vehicles from '../../images/Vehicles.png';
+import Footer from '../../../Footer';
+import vehicles from '../../../images/Vehicles.png';
 
 const correctOrder = [
     'das Auto',

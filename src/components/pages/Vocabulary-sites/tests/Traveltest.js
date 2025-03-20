@@ -1,56 +1,57 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import professions from '../../images/Professions.png';
+import Footer from '../../../Footer';
+import travel from '../../../images/Travel.png';
 
 const correctOrder = [
-    'der Landwirt',
-    'der Arzt',
-    'die Stewardess',
-    'der Löscher',
-    'die Pflegerin',
-    'der Jurist',
-    'der Fotograf',
-    'der Konditor',
-    'der Soldat',
-    'der Koch',
-    'der Taucher',
-    'die Sängerin',
-    'der Richter',
-    'der Tierarzt',
-    'der Friseur',
-    'der Fahrer',
-    'der Maler',
-    'der Musiker',
-    'der Kellner',
-    'der Polizist',
-    'die Putzfrau'
+    'das Flugzeug',
+    'der Rucksack',
+    'das Schloss',
+    'der Pass',
+    'der Pilot',
+    'der Koffer',
+    'die Rezeption',
+    'der Schlüssel',
+    'das Zimmer',
+    'das Zeichen',
+    'der Reiseführer',
+    'die Karte',
+    'das Denkmal',
+    'das Camp',
+    'das Ticket',
+    'der Flughafen',
+    'die Währung',
+    'das Taxi',
+    'die Apotheke',
+    'die Insel',
+    'das Gebirge'
   ];
   
-const Professionstest = () => {
+
+const Traveltest = () => {
     const [items, setItems] = useState([
-        { id: '1', content: 'die Pflegerin' },
-    { id: '2', content: 'der Landwirt' },
-    { id: '3', content: 'der Musiker' },
-    { id: '4', content: 'der Friseur' },
-    { id: '5', content: 'der Richter' },
-    { id: '6', content: 'der Soldat' },
-    { id: '7', content: 'die Stewardess' },
-    { id: '8', content: 'die Putzfrau' },
-    { id: '9', content: 'der Konditor' },
-    { id: '10', content: 'der Tierarzt' },
-    { id: '11', content: 'der Arzt' },
-    { id: '12', content: 'der Taucher' },
-    { id: '13', content: 'der Kellner' },
-    { id: '14', content: 'der Polizist' },
-    { id: '15', content: 'der Fahrer' },
-    { id: '16', content: 'der Fotograf' },
-    { id: '17', content: 'die Sängerin' },
-    { id: '18', content: 'der Koch' },
-    { id: '19', content: 'der Jurist' },
-    { id: '20', content: 'der Maler' },
-    { id: '21', content: 'der Löscher' }
+        { id: '1', content: 'die Karte' },
+        { id: '2', content: 'der Reiseführer' },
+        { id: '3', content: 'das Gebirge' },
+        { id: '4', content: 'der Pass' },
+        { id: '5', content: 'das Camp' },
+        { id: '6', content: 'die Insel' },
+        { id: '7', content: 'die Apotheke' },
+        { id: '8', content: 'die Rezeption' },
+        { id: '9', content: 'das Ticket' },
+        { id: '10', content: 'das Flugzeug' },
+        { id: '11', content: 'das Zeichen' },
+        { id: '12', content: 'das Zimmer' },
+        { id: '13', content: 'der Flughafen' },
+        { id: '14', content: 'das Denkmal' },
+        { id: '15', content: 'der Schlüssel' },
+        { id: '16', content: 'die Währung' },
+        { id: '17', content: 'der Koffer' },
+        { id: '18', content: 'das Schloss' },
+        { id: '19', content: 'das Taxi' },
+        { id: '20', content: 'der Pilot' },
+        { id: '21', content: 'der Rucksack' }
   ]);
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
@@ -91,7 +92,7 @@ const Professionstest = () => {
                 Put the words in the correct order according to the picture.
               </Typography>
               <Box className="excercise-box">
-                <img src={professions} alt="Professions" />
+                <img src={travel} alt="Travel" />
                 <ul className="draggable-list">
                   {items.map((item, index) => (
                     <li
@@ -131,4 +132,4 @@ const Professionstest = () => {
   );
 };
 
-export default Professionstest;
+export default Traveltest;

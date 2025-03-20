@@ -97,16 +97,16 @@ import Professions from './components/pages/Vocabulary-sites/Professions'
 import Vehicles from './components/pages/Vocabulary-sites/Vehicles'
 import BodyParts from './components/pages/Vocabulary-sites/BodyParts'
 import MonthsDays from './components/pages/Vocabulary-sites/Grocery'
-import Animalstest from './components/pages/Vocabulary-sites/Animalstest';
-import Traveltest from './components/pages/Vocabulary-sites/Traveltest';
-import Clothestest from './components/pages/Vocabulary-sites/Clothestest';
-import Weathertest from './components/pages/Vocabulary-sites/Weathertest';
-import HomeFamilytest from './components/pages/Vocabulary-sites/HomeFamilytest';
-import Sportstest from './components/pages/Vocabulary-sites/Sportstest';
-import Professionstest from './components/pages/Vocabulary-sites/Professionstest';
-import Vehiclestest from './components/pages/Vocabulary-sites/Vehiclestest';
-import BodyPartstest from './components/pages/Vocabulary-sites/BodyPartstest';
-import Grocerytest from './components/pages/Vocabulary-sites/Grocerytest';
+import Animalstest from './components/pages/Vocabulary-sites/tests/Animalstest';
+import Traveltest from './components/pages/Vocabulary-sites/tests/Traveltest';
+import Clothestest from './components/pages/Vocabulary-sites/tests/Clothestest';
+import Weathertest from './components/pages/Vocabulary-sites/tests/Weathertest';
+import HomeFamilytest from './components/pages/Vocabulary-sites/tests/HomeFamilytest';
+import Sportstest from './components/pages/Vocabulary-sites/tests/Sportstest';
+import Professionstest from './components/pages/Vocabulary-sites/tests/Professionstest';
+import Vehiclestest from './components/pages/Vocabulary-sites/tests/Vehiclestest';
+import BodyPartstest from './components/pages/Vocabulary-sites/tests/BodyPartstest';
+import Grocerytest from './components/pages/Vocabulary-sites/tests/Grocerytest';
 import Flashcards from './components/pages/Flashcard-sites/Flashcards';
 import { AuthProvider } from './components/AuthContext';
 import Login from './components/pages/Login';

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import weather from '../../images/Weather.png';
+import Footer from '../../../Footer';
+import weather from '../../../images/Weather.png';
 
 const correctOrder = [
     'die Sonne',

@@ -1,71 +1,57 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import homefamily from '../../images/HomeFamily.png';
+import Footer from '../../../Footer';
+import bodyparts from '../../../images/BodyParts.png';
 
 const correctOrder = [
-    'das Haus',
-    'das Zimmer',
-    'das Bad',
-    'das Fenster',
-    'die Küche',
-    'die Treppe',
-    'die Tür',
-    'der Salon',
-    'der Balkon',
-    'die Mutter',
-    'die Garage',
-    'der Essraum',
-    'das Kabinett',
-    'der Vater',
-    'die Familie',
-    'die Schwester',
-    'das Kind',
-    'der Bruder',
-    'der Opa',
-    'der Schrank',
-    'die Adoption',
-    'die Tante',
-    'der Onkel',
-    'das Ehepaar',
-    'die Beziehung',
-    'der Cousin',
-    'die Oma',
-    'der Götti'
+    'das Gesicht',
+    'die Augen',
+    'das Ohr',
+    'der Bart',
+    'der Zahn',
+    'die Nase',
+    'der Finger',
+    'die Zunge',
+    'der Mund',
+    'das Haar',
+    'der Rücken',
+    'die Beine',
+    'die Wange',
+    'die Hand',
+    'der Ellbogen',
+    'der Fuß',
+    'der Arm',
+    'das Knie',
+    'das Gehirn',
+    'der Knochen',
+    'der Nagel'
   ];
   
-
-const HomeFamilytest = () => {
-  const [items, setItems] = useState([
-    { id: '1', content: 'der Opa' },
-    { id: '2', content: 'der Balkon' },
-    { id: '3', content: 'die Adoption' },
-    { id: '4', content: 'die Mutter' },
-    { id: '5', content: 'das Fenster' },
-    { id: '6', content: 'der Vater' },
-    { id: '7', content: 'die Familie' },
-    { id: '8', content: 'die Garage' },
-    { id: '9', content: 'die Küche' },
-    { id: '10', content: 'das Bad' },
-    { id: '11', content: 'der Salon' },
-    { id: '12', content: 'die Beziehung' },
-    { id: '13', content: 'der Schrank' },
-    { id: '14', content: 'der Götti' },
-    { id: '15', content: 'die Schwester' },
-    { id: '16', content: 'der Essraum' },
-    { id: '17', content: 'das Kind' },
-    { id: '18', content: 'das Kabinett' },
-    { id: '19', content: 'der Onkel' },
-    { id: '20', content: 'die Oma' },
-    { id: '21', content: 'das Zimmer' },
-    { id: '22', content: 'das Haus' },
-    { id: '23', content: 'die Treppe' },
-    { id: '24', content: 'die Tante' },
-    { id: '25', content: 'das Ehepaar' },
-    { id: '26', content: 'der Bruder' },
-    { id: '27', content: 'der Cousin' },
-    { id: '28', content: 'die Tür' }
+  
+const BodyParts = () => {
+    const [items, setItems] = useState([
+    { id: '1', content: 'die Nase' },
+    { id: '2', content: 'das Knie' },
+    { id: '3', content: 'die Wange' },
+    { id: '4', content: 'der Bart' },
+    { id: '5', content: 'der Zahn' },
+    { id: '6', content: 'das Haar' },
+    { id: '7', content: 'der Rücken' },
+    { id: '8', content: 'das Gesicht' },
+    { id: '9', content: 'die Augen' },
+    { id: '10', content: 'die Beine' },
+    { id: '11', content: 'der Ellbogen' },
+    { id: '12', content: 'der Finger' },
+    { id: '13', content: 'die Zunge' },
+    { id: '14', content: 'das Ohr' },
+    { id: '15', content: 'der Arm' },
+    { id: '16', content: 'das Gehirn' },
+    { id: '17', content: 'der Fuß' },
+    { id: '18', content: 'der Mund' },
+    { id: '19', content: 'die Hand' },
+    { id: '20', content: 'der Nagel' },
+    { id: '21', content: 'der Knochen' }
   ]);
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
@@ -106,7 +92,7 @@ const HomeFamilytest = () => {
                 Put the words in the correct order according to the picture.
               </Typography>
               <Box className="excercise-box">
-                <img src={homefamily} alt="HomeFamily" />
+                <img src={bodyparts} alt="BodyParts" />
                 <ul className="draggable-list">
                   {items.map((item, index) => (
                     <li
@@ -146,4 +132,4 @@ const HomeFamilytest = () => {
   );
 };
 
-export default HomeFamilytest;
+export default BodyParts;

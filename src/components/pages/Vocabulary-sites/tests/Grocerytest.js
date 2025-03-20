@@ -1,57 +1,70 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import travel from '../../images/Travel.png';
+import Footer from '../../../Footer';
+import grocery from '../../../images/Grocery.png';
 
 const correctOrder = [
-    'das Flugzeug',
-    'der Rucksack',
-    'das Schloss',
-    'der Pass',
-    'der Pilot',
-    'der Koffer',
-    'die Rezeption',
-    'der Schlüssel',
-    'das Zimmer',
-    'das Zeichen',
-    'der Reiseführer',
-    'die Karte',
-    'das Denkmal',
-    'das Camp',
-    'das Ticket',
-    'der Flughafen',
-    'die Währung',
-    'das Taxi',
-    'die Apotheke',
-    'die Insel',
-    'das Gebirge'
+    'das Brot',
+    'die Butter',
+    'das Brötchen',
+    'der Joghurt',
+    'der Käse',
+    'die Milch',
+    'das Ei',
+    'der Pfeffer',
+    'das Fleisch',
+    'das Mehl',
+    'der Zucker',
+    'das Salz',
+    'die Nudeln',
+    'die Tomate',
+    'der Fisch',
+    'die Gurke',
+    'die Kartoffel',
+    'der Reis',
+    'die Karotte',
+    'der Paprika',
+    'der Apfel',
+    'die Nuss',
+    'die Traube',
+    'die Zitrone',
+    'der Salat',
+    'der Saft',
+    'das Eis',
+    'das Wasser'
   ];
   
-
-const Traveltest = () => {
-    const [items, setItems] = useState([
-        { id: '1', content: 'die Karte' },
-        { id: '2', content: 'der Reiseführer' },
-        { id: '3', content: 'das Gebirge' },
-        { id: '4', content: 'der Pass' },
-        { id: '5', content: 'das Camp' },
-        { id: '6', content: 'die Insel' },
-        { id: '7', content: 'die Apotheke' },
-        { id: '8', content: 'die Rezeption' },
-        { id: '9', content: 'das Ticket' },
-        { id: '10', content: 'das Flugzeug' },
-        { id: '11', content: 'das Zeichen' },
-        { id: '12', content: 'das Zimmer' },
-        { id: '13', content: 'der Flughafen' },
-        { id: '14', content: 'das Denkmal' },
-        { id: '15', content: 'der Schlüssel' },
-        { id: '16', content: 'die Währung' },
-        { id: '17', content: 'der Koffer' },
-        { id: '18', content: 'das Schloss' },
-        { id: '19', content: 'das Taxi' },
-        { id: '20', content: 'der Pilot' },
-        { id: '21', content: 'der Rucksack' }
+const Grocerytest = () => {
+  const [items, setItems] = useState([
+    { id: '1', content: 'die Karotte' },
+    { id: '2', content: 'der Zucker' },
+    { id: '3', content: 'die Butter' },
+    { id: '4', content: 'der Joghurt' },
+    { id: '5', content: 'das Brötchen' },
+    { id: '6', content: 'der Salat' },
+    { id: '7', content: 'die Gurke' },
+    { id: '8', content: 'die Traube' },
+    { id: '9', content: 'das Eis' },
+    { id: '10', content: 'die Zitrone' },
+    { id: '11', content: 'die Nuss' },
+    { id: '12', content: 'der Reis' },
+    { id: '13', content: 'das Ei' },
+    { id: '14', content: 'die Tomate' },
+    { id: '15', content: 'der Apfel' },
+    { id: '16', content: 'das Mehl' },
+    { id: '17', content: 'das Brot' },
+    { id: '18', content: 'das Salz' },
+    { id: '19', content: 'der Fisch' },
+    { id: '20', content: 'die Milch' },
+    { id: '21', content: 'der Pfeffer' },
+    { id: '22', content: 'das Wasser' },
+    { id: '23', content: 'der Paprika' },
+    { id: '24', content: 'das Fleisch' },
+    { id: '25', content: 'die Nudeln' },
+    { id: '26', content: 'die Kartoffel' },
+    { id: '27', content: 'der Saft' },
+    { id: '28', content: 'der Käse' }
   ]);
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
@@ -92,7 +105,7 @@ const Traveltest = () => {
                 Put the words in the correct order according to the picture.
               </Typography>
               <Box className="excercise-box">
-                <img src={travel} alt="Travel" />
+                <img src={grocery} alt="Grocery" />
                 <ul className="draggable-list">
                   {items.map((item, index) => (
                     <li
@@ -132,4 +145,4 @@ const Traveltest = () => {
   );
 };
 
-export default Traveltest;
+export default Grocerytest;

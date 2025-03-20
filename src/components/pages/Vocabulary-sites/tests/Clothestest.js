@@ -1,70 +1,58 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import animals from '../../images/monkey.png';
+import Footer from '../../../Footer';
+import clothes from '../../../images/Clothes-voc.png';
 
 const correctOrder = [
-    'die Katze',
-'der Hund',
-'das Kaninchen',
-'der Tiger',
-'der Delfin',
-'der Affe',
-'der Pinguin',
-'die Schlange',
-'der Vogel',
-'die Giraffe',
-'die Ratte',
-'die Kuh',
-'das Eichhörnchen',
-'die Qualle',
-'der Elefant',
-'die Schildkröte',
-'der Frosch',
-'der Schmetterling',
-'das Kamel',
-'der Fisch',
-'der Wal',
-'der Widder',
-'der Wolf',
-'der Hai',
-'der Löwe',
-'das Pferd',
-'der Krebs',
-'die Spinne'
+    'die Bluse',
+    'der Pullover',
+    'die Jacke',
+    'der Mantel',
+    'die Shorts',
+    'die Hose',
+    'der Rock',
+    'das Kleid',
+    'der Anzug',
+    'der Schlafanzug',
+    'der Schlafrock',
+    'die Uhr',
+    'der Schuh',
+    'der Badeschuh',
+    'die Brille',
+    'die Schirmmütze',
+    'die Socke',
+    'die Mütze',
+    'die Tüte',
+    'der Hut',
+    'die Krawatte'
   ];
+  
+  
 
-const Animalstest = () => {
-  const [items, setItems] = useState([
-    { id: '1', content: 'die Spinne' },
-    { id: '2', content: 'das Kamel' },
-    { id: '3', content: 'die Ratte' },
-    { id: '4', content: 'der Fisch' },
-    { id: '5', content: 'die Qualle' },
-    { id: '6', content: 'der Löwe' },
-    { id: '7', content: 'der Wal' },
-    { id: '8', content: 'die Schildkröte' },
-    { id: '9', content: 'der Krebs' },
-    { id: '10', content: 'der Wolf' },
-    { id: '11', content: 'die Kuh' },
-    { id: '12', content: 'das Pferd' },
-    { id: '13', content: 'der Widder' },
-    { id: '14', content: 'der Frosch' },
-    { id: '15', content: 'der Schmetterling' },
-    { id: '16', content: 'der Hai' },
-    { id: '17', content: 'das Eichhörnchen' },
-    { id: '18', content: 'der Elefant' },
-    { id: '19', content: 'der Tiger' },
-    { id: '20', content: 'die Giraffe' },
-    { id: '21', content: 'die Katze' },
-    { id: '22', content: 'der Pinguin' },
-    { id: '23', content: 'der Affe' },
-    { id: '24', content: 'die Schlange' },
-    { id: '25', content: 'der Delfin' },
-    { id: '26', content: 'das Kaninchen' },
-    { id: '27', content: 'der Hund' },
-    { id: '28', content: 'der Vogel' }
+const Clothestest = () => {
+    const [items, setItems] = useState([
+        { id: '1', content: 'die Mütze' },
+    { id: '2', content: 'der Schuh' },
+    { id: '3', content: 'der Mantel' },
+    { id: '4', content: 'die Schirmmütze' },
+    { id: '5', content: 'der Anzug' },
+    { id: '6', content: 'die Socke' },
+    { id: '7', content: 'der Badeschuh' },
+    { id: '8', content: 'die Krawatte' },
+    { id: '9', content: 'die Uhr' },
+    { id: '10', content: 'die Hose' },
+    { id: '11', content: 'die Shorts' },
+    { id: '12', content: 'die Tüte' },
+    { id: '13', content: 'der Pullover' },
+    { id: '14', content: 'der Hut' },
+    { id: '15', content: 'die Bluse' },
+    { id: '16', content: 'der Schlafanzug' },
+    { id: '17', content: 'die Jacke' },
+    { id: '18', content: 'der Rock' },
+    { id: '19', content: 'das Kleid' },
+    { id: '20', content: 'die Brille' },
+    { id: '21', content: 'der Schlafrock' }
   ]);
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
@@ -105,7 +93,7 @@ const Animalstest = () => {
                 Put the words in the correct order according to the picture.
               </Typography>
               <Box className="excercise-box">
-                <img src={animals} alt="Animals" />
+                <img src={clothes} alt="Clothes" />
                 <ul className="draggable-list">
                   {items.map((item, index) => (
                     <li
@@ -145,4 +133,4 @@ const Animalstest = () => {
   );
 };
 
-export default Animalstest;
+export default Clothestest;

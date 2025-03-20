@@ -5,7 +5,7 @@ import united from '../../images/united.png'
 import german from '../../images/german.png'
 import Footer from '../../Footer'
 import {Link} from 'react-router-dom';
-import './HomeFamilytest'
+import './tests/HomeFamilytest'
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 function HomeFamily() {
   return (

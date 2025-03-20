@@ -93,6 +93,13 @@ const FolderDetail = () => {
                   onChange={(e) => handleInputChange(index, 'definition', e.target.value)}
                   className="text-def-input"
                 />
+                <input
+  type="text"
+  placeholder="Tagi (oddzielone przecinkami)"
+  value={flashcard.tags ? flashcard.tags.join(", ") : ""}
+  onChange={(e) => handleInputChange(index, 'tags', e.target.value.split(",").map(tag => tag.trim()))}
+/>
+
                 <button 
               className="delete-flashcard-btn" 
               onClick={() => deleteFlashcard(index)}

@@ -1,70 +1,56 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import grocery from '../../images/Grocery.png';
+import Footer from '../../../Footer';
+import professions from '../../../images/Professions.png';
 
 const correctOrder = [
-    'das Brot',
-    'die Butter',
-    'das Brötchen',
-    'der Joghurt',
-    'der Käse',
-    'die Milch',
-    'das Ei',
-    'der Pfeffer',
-    'das Fleisch',
-    'das Mehl',
-    'der Zucker',
-    'das Salz',
-    'die Nudeln',
-    'die Tomate',
-    'der Fisch',
-    'die Gurke',
-    'die Kartoffel',
-    'der Reis',
-    'die Karotte',
-    'der Paprika',
-    'der Apfel',
-    'die Nuss',
-    'die Traube',
-    'die Zitrone',
-    'der Salat',
-    'der Saft',
-    'das Eis',
-    'das Wasser'
+    'der Landwirt',
+    'der Arzt',
+    'die Stewardess',
+    'der Löscher',
+    'die Pflegerin',
+    'der Jurist',
+    'der Fotograf',
+    'der Konditor',
+    'der Soldat',
+    'der Koch',
+    'der Taucher',
+    'die Sängerin',
+    'der Richter',
+    'der Tierarzt',
+    'der Friseur',
+    'der Fahrer',
+    'der Maler',
+    'der Musiker',
+    'der Kellner',
+    'der Polizist',
+    'die Putzfrau'
   ];
   
-const Grocerytest = () => {
-  const [items, setItems] = useState([
-    { id: '1', content: 'die Karotte' },
-    { id: '2', content: 'der Zucker' },
-    { id: '3', content: 'die Butter' },
-    { id: '4', content: 'der Joghurt' },
-    { id: '5', content: 'das Brötchen' },
-    { id: '6', content: 'der Salat' },
-    { id: '7', content: 'die Gurke' },
-    { id: '8', content: 'die Traube' },
-    { id: '9', content: 'das Eis' },
-    { id: '10', content: 'die Zitrone' },
-    { id: '11', content: 'die Nuss' },
-    { id: '12', content: 'der Reis' },
-    { id: '13', content: 'das Ei' },
-    { id: '14', content: 'die Tomate' },
-    { id: '15', content: 'der Apfel' },
-    { id: '16', content: 'das Mehl' },
-    { id: '17', content: 'das Brot' },
-    { id: '18', content: 'das Salz' },
-    { id: '19', content: 'der Fisch' },
-    { id: '20', content: 'die Milch' },
-    { id: '21', content: 'der Pfeffer' },
-    { id: '22', content: 'das Wasser' },
-    { id: '23', content: 'der Paprika' },
-    { id: '24', content: 'das Fleisch' },
-    { id: '25', content: 'die Nudeln' },
-    { id: '26', content: 'die Kartoffel' },
-    { id: '27', content: 'der Saft' },
-    { id: '28', content: 'der Käse' }
+const Professionstest = () => {
+    const [items, setItems] = useState([
+        { id: '1', content: 'die Pflegerin' },
+    { id: '2', content: 'der Landwirt' },
+    { id: '3', content: 'der Musiker' },
+    { id: '4', content: 'der Friseur' },
+    { id: '5', content: 'der Richter' },
+    { id: '6', content: 'der Soldat' },
+    { id: '7', content: 'die Stewardess' },
+    { id: '8', content: 'die Putzfrau' },
+    { id: '9', content: 'der Konditor' },
+    { id: '10', content: 'der Tierarzt' },
+    { id: '11', content: 'der Arzt' },
+    { id: '12', content: 'der Taucher' },
+    { id: '13', content: 'der Kellner' },
+    { id: '14', content: 'der Polizist' },
+    { id: '15', content: 'der Fahrer' },
+    { id: '16', content: 'der Fotograf' },
+    { id: '17', content: 'die Sängerin' },
+    { id: '18', content: 'der Koch' },
+    { id: '19', content: 'der Jurist' },
+    { id: '20', content: 'der Maler' },
+    { id: '21', content: 'der Löscher' }
   ]);
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
@@ -105,7 +91,7 @@ const Grocerytest = () => {
                 Put the words in the correct order according to the picture.
               </Typography>
               <Box className="excercise-box">
-                <img src={grocery} alt="Grocery" />
+                <img src={professions} alt="Professions" />
                 <ul className="draggable-list">
                   {items.map((item, index) => (
                     <li
@@ -145,4 +131,4 @@ const Grocerytest = () => {
   );
 };
 
-export default Grocerytest;
+export default Professionstest;

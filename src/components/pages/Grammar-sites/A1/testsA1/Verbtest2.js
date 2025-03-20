@@ -7,7 +7,7 @@ function Verbtest2() {
     { text: 'Was ___ du am liebsten zum Frühstück?', verb: 'essen', correctAnswer: 'isst' },
     { text: 'Herr Wagner, ___ Sie Ihren Kollegen oft?', verb: 'helfen', correctAnswer: 'helfen' },
     { text: 'Maria ___ den Sonnenuntergang gerne.', verb: 'sehen', correctAnswer: 'sieht' },
-    { text: '___ ihr dieses Buch in der Schule?', verb: 'Lesen', correctAnswer: ['Lest','lest'] },
+    { text: '___ ihr dieses Buch in der Schule?', verb: 'Lesen', correctAnswer: 'lest' },
     { text: 'Du ___ immer sehr tief.', verb: 'schlafen', correctAnswer: 'schläfst' },
     { text: 'Der Kellner ___ die Teller sehr vorsichtig.', verb: 'tragen', correctAnswer: 'trägt' },
     { text: 'Was ___ du von diesem Film?', verb: 'halten', correctAnswer: 'hältst' },

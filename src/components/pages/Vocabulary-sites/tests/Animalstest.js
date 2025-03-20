@@ -1,59 +1,70 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import sports from '../../images/Sports.png';
+import Footer from '../../../Footer';
+import animals from '../../../images/monkey.png';
 
 const correctOrder = [
-    'der Kraftraum',
-    'der Basketball',
-    'das Tennis',
-    'das Schwimmen',
-    'das Laufen',
-    'der Fußball',
-    'der Sieg',
-    'der Volleyball',
-    'der Ball',
-    'das Golf',
-    'das Radfahren',
-    'das Tanzen',
-    'das Querruder',
-    'die Kletterei',
-    'das Bogenschießen',
-    'das Skifahren',
-    'der Handball',
-    'der Kanusport',
-    'der Reitsport',
-    'das Ringen',
-    'das Turnen'
+    'die Katze',
+'der Hund',
+'das Kaninchen',
+'der Tiger',
+'der Delfin',
+'der Affe',
+'der Pinguin',
+'die Schlange',
+'der Vogel',
+'die Giraffe',
+'die Ratte',
+'die Kuh',
+'das Eichhörnchen',
+'die Qualle',
+'der Elefant',
+'die Schildkröte',
+'der Frosch',
+'der Schmetterling',
+'das Kamel',
+'der Fisch',
+'der Wal',
+'der Widder',
+'der Wolf',
+'der Hai',
+'der Löwe',
+'das Pferd',
+'der Krebs',
+'die Spinne'
   ];
-  
-  
-  
 
-const Sportstest = () => {
-    const [items, setItems] = useState([
-        { id: '1', content: 'der Reitsport' },
-        { id: '2', content: 'der Kraftraum' },
-        { id: '3', content: 'das Laufen' },
-        { id: '4', content: 'die Kletterei' },
-        { id: '5', content: 'das Ringen' },
-        { id: '6', content: 'der Sieg' },
-        { id: '7', content: 'das Turnen' },
-        { id: '8', content: 'das Querruder' },
-        { id: '9', content: 'der Fußball' },
-        { id: '10', content: 'der Handball' },
-        { id: '11', content: 'das Tanzen' },
-        { id: '12', content: 'das Skifahren' },
-        { id: '13', content: 'der Volleyball' },
-        { id: '14', content: 'das Bogenschießen' },
-        { id: '15', content: 'das Golf' },
-        { id: '16', content: 'das Radfahren' },
-        { id: '17', content: 'das Tennis' },
-        { id: '18', content: 'der Ball' },
-        { id: '19', content: 'der Basketball' },
-        { id: '20', content: 'der Kanusport' },
-        { id: '21', content: 'das Schwimmen' }
+const Animalstest = () => {
+  const [items, setItems] = useState([
+    { id: '1', content: 'die Spinne' },
+    { id: '2', content: 'das Kamel' },
+    { id: '3', content: 'die Ratte' },
+    { id: '4', content: 'der Fisch' },
+    { id: '5', content: 'die Qualle' },
+    { id: '6', content: 'der Löwe' },
+    { id: '7', content: 'der Wal' },
+    { id: '8', content: 'die Schildkröte' },
+    { id: '9', content: 'der Krebs' },
+    { id: '10', content: 'der Wolf' },
+    { id: '11', content: 'die Kuh' },
+    { id: '12', content: 'das Pferd' },
+    { id: '13', content: 'der Widder' },
+    { id: '14', content: 'der Frosch' },
+    { id: '15', content: 'der Schmetterling' },
+    { id: '16', content: 'der Hai' },
+    { id: '17', content: 'das Eichhörnchen' },
+    { id: '18', content: 'der Elefant' },
+    { id: '19', content: 'der Tiger' },
+    { id: '20', content: 'die Giraffe' },
+    { id: '21', content: 'die Katze' },
+    { id: '22', content: 'der Pinguin' },
+    { id: '23', content: 'der Affe' },
+    { id: '24', content: 'die Schlange' },
+    { id: '25', content: 'der Delfin' },
+    { id: '26', content: 'das Kaninchen' },
+    { id: '27', content: 'der Hund' },
+    { id: '28', content: 'der Vogel' }
   ]);
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
@@ -94,7 +105,7 @@ const Sportstest = () => {
                 Put the words in the correct order according to the picture.
               </Typography>
               <Box className="excercise-box">
-                <img src={sports} alt="Sports" />
+                <img src={animals} alt="Animals" />
                 <ul className="draggable-list">
                   {items.map((item, index) => (
                     <li
@@ -134,4 +145,4 @@ const Sportstest = () => {
   );
 };
 
-export default Sportstest;
+export default Animalstest;

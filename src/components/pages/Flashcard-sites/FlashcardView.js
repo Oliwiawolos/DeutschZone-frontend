@@ -12,6 +12,7 @@ const FlashcardViewer = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [showTerm, setShowTerm] = useState(true);
   const navigate = useNavigate();
+  const [searchTag, setSearchTag] = useState("");
 
   useEffect(() => {
     const fetchFolderDetails = async () => {
@@ -26,7 +27,8 @@ const FlashcardViewer = () => {
           const flashcardsSnapshot = await getDocs(flashcardsCollection);
           const flashcardsList = flashcardsSnapshot.docs.map(doc => ({
             id: doc.id,
-            ...doc.data()
+            ...doc.data(),
+            tags: doc.data().tags || []
           }));
 
           setFlashcards(flashcardsList); 

@@ -49,7 +49,8 @@ const Folders = () => {
       const flashcardPromises = flashcards.map(flashcard => 
         addDoc(collection(db, `folders/${folderRef.id}/flashcards`), {
           term: flashcard.term,
-          definition: flashcard.definition
+          definition: flashcard.definition,
+          tags: flashcard.tags || []
         })
       );
   

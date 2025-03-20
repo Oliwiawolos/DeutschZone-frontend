@@ -1,57 +1,59 @@
 import React, { useState } from 'react';
 import { Card, CardContent, Box, Typography, Grid,Button } from '@mui/material';
 import './styletests.css';
-import Footer from '../../Footer';
-import bodyparts from '../../images/BodyParts.png';
+import Footer from '../../../Footer';
+import sports from '../../../images/Sports.png';
 
 const correctOrder = [
-    'das Gesicht',
-    'die Augen',
-    'das Ohr',
-    'der Bart',
-    'der Zahn',
-    'die Nase',
-    'der Finger',
-    'die Zunge',
-    'der Mund',
-    'das Haar',
-    'der Rücken',
-    'die Beine',
-    'die Wange',
-    'die Hand',
-    'der Ellbogen',
-    'der Fuß',
-    'der Arm',
-    'das Knie',
-    'das Gehirn',
-    'der Knochen',
-    'der Nagel'
+    'der Kraftraum',
+    'der Basketball',
+    'das Tennis',
+    'das Schwimmen',
+    'das Laufen',
+    'der Fußball',
+    'der Sieg',
+    'der Volleyball',
+    'der Ball',
+    'das Golf',
+    'das Radfahren',
+    'das Tanzen',
+    'das Querruder',
+    'die Kletterei',
+    'das Bogenschießen',
+    'das Skifahren',
+    'der Handball',
+    'der Kanusport',
+    'der Reitsport',
+    'das Ringen',
+    'das Turnen'
   ];
   
   
-const BodyParts = () => {
+  
+
+const Sportstest = () => {
     const [items, setItems] = useState([
-    { id: '1', content: 'die Nase' },
-    { id: '2', content: 'das Knie' },
-    { id: '3', content: 'die Wange' },
-    { id: '4', content: 'der Bart' },
-    { id: '5', content: 'der Zahn' },
-    { id: '6', content: 'das Haar' },
-    { id: '7', content: 'der Rücken' },
-    { id: '8', content: 'das Gesicht' },
-    { id: '9', content: 'die Augen' },
-    { id: '10', content: 'die Beine' },
-    { id: '11', content: 'der Ellbogen' },
-    { id: '12', content: 'der Finger' },
-    { id: '13', content: 'die Zunge' },
-    { id: '14', content: 'das Ohr' },
-    { id: '15', content: 'der Arm' },
-    { id: '16', content: 'das Gehirn' },
-    { id: '17', content: 'der Fuß' },
-    { id: '18', content: 'der Mund' },
-    { id: '19', content: 'die Hand' },
-    { id: '20', content: 'der Nagel' },
-    { id: '21', content: 'der Knochen' }
+        { id: '1', content: 'der Reitsport' },
+        { id: '2', content: 'der Kraftraum' },
+        { id: '3', content: 'das Laufen' },
+        { id: '4', content: 'die Kletterei' },
+        { id: '5', content: 'das Ringen' },
+        { id: '6', content: 'der Sieg' },
+        { id: '7', content: 'das Turnen' },
+        { id: '8', content: 'das Querruder' },
+        { id: '9', content: 'der Fußball' },
+        { id: '10', content: 'der Handball' },
+        { id: '11', content: 'das Tanzen' },
+        { id: '12', content: 'das Skifahren' },
+        { id: '13', content: 'der Volleyball' },
+        { id: '14', content: 'das Bogenschießen' },
+        { id: '15', content: 'das Golf' },
+        { id: '16', content: 'das Radfahren' },
+        { id: '17', content: 'das Tennis' },
+        { id: '18', content: 'der Ball' },
+        { id: '19', content: 'der Basketball' },
+        { id: '20', content: 'der Kanusport' },
+        { id: '21', content: 'das Schwimmen' }
   ]);
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
@@ -92,7 +94,7 @@ const BodyParts = () => {
                 Put the words in the correct order according to the picture.
               </Typography>
               <Box className="excercise-box">
-                <img src={bodyparts} alt="BodyParts" />
+                <img src={sports} alt="Sports" />
                 <ul className="draggable-list">
                   {items.map((item, index) => (
                     <li
@@ -132,4 +134,4 @@ const BodyParts = () => {
   );
 };
 
-export default BodyParts;
+export default Sportstest;
