@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './Folders.css';
 import {useNavigate} from 'react-router-dom'
-import { db } from '../../FirebaseConfig';
-import { collection, addDoc } from "firebase/firestore";
 import Footer from '../../Footer'
-import { serverTimestamp } from "firebase/firestore";
 
 const Folders = () => {
   const [flashcards, setFlashcards] = useState([
@@ -33,39 +30,54 @@ const Folders = () => {
     setFlashcards(newFlashcards);
   };
 
-  const saveFolderToFirebase = () => {
+  const saveFolderToFlask = async () => {
     if (!folderName) {
-      alert("Podaj nazwę folderu");
+      alert("Please enter a folder name.");
       return;
     }
-  
-    addDoc(collection(db, 'folders'), {
-      name: folderName,
-      createdAt: serverTimestamp()
-    })
-    .then((folderRef) => {
-      console.log('Folder saved, ID:', folderRef.id);
-  
-      const flashcardPromises = flashcards.map(flashcard => 
-        addDoc(collection(db, `folders/${folderRef.id}/flashcards`), {
-          term: flashcard.term,
-          definition: flashcard.definition,
-          tags: flashcard.tags || []
-        })
-      );
-  
-      return Promise.all(flashcardPromises);
-    })
-    .then(() => {
-      console.log('All flashcards saved');
-      alert("Folder i fiszki zostały zapisane!");
-      navigate('/flashcards');
-    })
-    .catch((error) => {
-      console.error("Błąd podczas zapisywania fiszek:", error);
-    });
-  };
 
+    try {
+      const response = await fetch("http://127.0.0.1:5000/folders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: folderName,
+          user_id: 1, 
+        }),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to create folder");
+      }
+  
+      const folderId = result.folder_id;
+  
+      for (const flashcard of flashcards) {
+        if (flashcard.term && flashcard.definition) {
+          await fetch("http://127.0.0.1:5000/flashcards", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              term: flashcard.term,
+              definition: flashcard.definition,
+              folder_id: folderId
+            }),
+          });
+        }
+      }
+  
+      alert("Folder and flashcards saved!");
+      navigate('/flashcards');
+  
+    } catch (error) {
+      console.error("Error saving folder or flashcards:", error);
+    }
+  };
   return (
     <>
     <div className="folder-container">
@@ -107,7 +119,7 @@ const Folders = () => {
       </div>
       
       <button className="add-flashcard-btn" onClick={addFlashcard}>+ Add Flashcard</button>
-      <button className="save-folder-btn" onClick={saveFolderToFirebase}>Save a Folder</button>
+      <button className="save-folder-btn" onClick={saveFolderToFlask}>Save a Folder</button>
 
     </div>
     <Footer />

@@ -4,66 +4,45 @@ import { useAuth } from "../../AuthContext";
 import {Button} from '../../Button'
 import login from '../../images/login.png';
 import './Flashcards.css';
-import { db } from '../../FirebaseConfig'; 
-import { collection, getDocs } from "firebase/firestore"; 
-import { deleteDoc, doc } from "firebase/firestore"; 
 import Footer from '../../Footer'
 
 
 const Flashcards = () => {
-  const { currentUser } = useAuth();
-  const [folders, setFolders] = useState([]); 
-  const handleDeleteFolder = async (folderId) => {
-    try {
-      const folderDocRef = doc(db, 'folders', folderId);
-      await deleteDoc(folderDocRef);
-      setFolders(folders.filter((folder) => folder.id !== folderId));
-    } catch (error) {
-      console.error("Error deleting folder:", error);
+const { currentUser } = useAuth();
+const [folders, setFolders] = useState([]); 
+  
+const fetchFolders = async () => {
+  try {
+    const response = await fetch(`http://127.0.0.1:5000/folders/1`);
+    const data = await response.json();
+    setFolders(data);
+  } catch (error) {
+    console.error("Error fetching folders:", error);
+  }
+};
+
+useEffect(() => {
+  if (currentUser) {
+    fetchFolders();
+  }
+}, [currentUser]);
+  
+const handleDeleteFolder = async (folderId) => {
+  try {
+    const response = await fetch(`http://127.0.0.1:5000/folders/${folderId}`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to delete folder");
     }
-  };
-  
-  useEffect(() => {
-    if (currentUser) {
-      const fetchFolders = async () => {
-        try {
-          const folderCollection = collection(db, 'folders');
-          const folderSnapshot = await getDocs(folderCollection);
-      
-          const folderList = await Promise.all(
-            folderSnapshot.docs.map(async (doc) => {
-              const flashcardsCollection = collection(db, `folders/${doc.id}/flashcards`);
-              const flashcardsSnapshot = await getDocs(flashcardsCollection);
-              const flashcardsCount = flashcardsSnapshot.size;
-              const data = doc.data();
-              
-              console.log('Folder:', data.name, 'Created at:', data.createdAt); 
-      
-              return {
-                id: doc.id,
-                ...data,
-                flashcardsCount: flashcardsCount,
-                createdAt: data.createdAt 
-              };
-            })
-          );
-      
-          const sortedFolders = folderList.sort((a, b) => {
-            return b.createdAt?.seconds - a.createdAt?.seconds;
-          });
-      
-          setFolders(sortedFolders);
-        } catch (error) {
-          console.error("Error fetching folders:", error);
-        }
-      };
-  
-      fetchFolders();
-    }
-  }, [currentUser]);
-  
-  
-  
+
+    setFolders(folders.filter((folder) => folder.id !== folderId));
+    console.log("Folder deleted successfully");
+  } catch (error) {
+    console.error("Error deleting folder:", error);
+  }
+};
   if (!currentUser) {
     return (
       <div className="flashcards-container">
@@ -101,9 +80,10 @@ const Flashcards = () => {
             <Link to={`/FolderDetail/${folder.id}`}>
               <button>Open</button>
             </Link>
-            <Link to={`/edit-folder/${folder.id}`}>
+            <Link to={`/FolderDetail/${folder.id}`}>
               <button>Edit</button>
             </Link>
+
             <button onClick={() => handleDeleteFolder(folder.id)}>Delete</button>
           </div>
         </div>

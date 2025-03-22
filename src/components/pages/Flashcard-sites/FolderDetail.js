@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './Folders.css';
 import { useParams } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom'
-import { db } from '../../FirebaseConfig';
-import { collection, addDoc, getDocs, doc, updateDoc } from "firebase/firestore"; 
 import Footer from '../../Footer';
 
 
@@ -15,13 +13,9 @@ const FolderDetail = () => {
   useEffect(() => { 
     const fetchFlashcards = async () => {
       try {
-        const flashcardsCollection = collection(db, `folders/${id}/flashcards`);
-        const flashcardsSnapshot = await getDocs(flashcardsCollection);
-        const flashcardsList = flashcardsSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setFlashcards(flashcardsList);
+        const response = await fetch(`http://127.0.0.1:5000/flashcards/${id}`);
+        const data = await response.json();
+        setFlashcards(data);
       } catch (error) {
         console.error("Error fetching flashcards:", error);
       }
@@ -30,44 +24,77 @@ const FolderDetail = () => {
     fetchFlashcards();
   }, [id]);
 
+
   const handleInputChange = (index, field, value) => {
     const newFlashcards = [...flashcards];
     newFlashcards[index][field] = value;
     setFlashcards(newFlashcards);
   };
 
-   const saveFlashcardsToFirebase = async () => {
+  useEffect(() => { 
+    const fetchFlashcards = async () => {
+      try {
+        const response = await fetch(`http://127.0.0.1:5000/flashcards/${id}`);
+        const data = await response.json();
+        setFlashcards(data);
+      } catch (error) {
+        console.error("Error fetching flashcards:", error);
+      }
+    };
+
+    fetchFlashcards();
+  }, [id]);
+  const saveFlashcardsToFlask = async () => {
     try {
       for (const flashcard of flashcards) {
         if (flashcard.id) {
-          const flashcardRef = doc(db, `folders/${id}/flashcards`, flashcard.id);
-          await updateDoc(flashcardRef, {
-            term: flashcard.term,
-            definition: flashcard.definition
+          await fetch(`http://127.0.0.1:5000/flashcards/${flashcard.id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              term: flashcard.term,
+              definition: flashcard.definition,
+            }),
           });
-        } else {
-          await addDoc(collection(db, `folders/${id}/flashcards`), {
-            term: flashcard.term,
-            definition: flashcard.definition
+        } 
+        else {
+          await fetch('http://127.0.0.1:5000/flashcards', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              term: flashcard.term,
+              definition: flashcard.definition,
+              folder_id: id,
+            }),
           });
         }
       }
-      alert("Flashcards have been updated!");
+  
+      alert('Flashcards saved!');
       navigate('/flashcards');
     } catch (error) {
-      console.error("Error updating flashcards:", error);
-      alert("An error occurred while saving flashcards.");
+      console.error('Error saving flashcards:', error);
+      alert('An error occurred while saving flashcards.');
     }
   };
-
+  
+  
   const addFlashcard = () => {
     setFlashcards([...flashcards, { id: null, term: '', definition: '' }]);
   };
 
-  const deleteFlashcard = (index) => {
-    const updatedFlashcards = flashcards.filter((_, i) => i !== index); 
-    setFlashcards(updatedFlashcards);
+  const deleteFlashcard = async (flashcardId, index) => {
+    try {
+      await fetch(`http://127.0.0.1:5000/flashcards/${flashcardId}`, {
+        method: 'DELETE',
+      });
+      setFlashcards((prev) => prev.filter((_, i) => i !== index));
+    } catch (error) {
+      console.error("Error deleting flashcard:", error);
+    }
   };
+  
+  
 
 
 
@@ -93,17 +120,12 @@ const FolderDetail = () => {
                   onChange={(e) => handleInputChange(index, 'definition', e.target.value)}
                   className="text-def-input"
                 />
-                <input
-  type="text"
-  placeholder="Tagi (oddzielone przecinkami)"
-  value={flashcard.tags ? flashcard.tags.join(", ") : ""}
-  onChange={(e) => handleInputChange(index, 'tags', e.target.value.split(",").map(tag => tag.trim()))}
-/>
+                
 
                 <button 
-              className="delete-flashcard-btn" 
-              onClick={() => deleteFlashcard(index)}
-                >
+  className="delete-flashcard-btn" 
+  onClick={() => deleteFlashcard(flashcard.id, index)}
+> 
                  -
                 </button>
               </div>
@@ -113,7 +135,7 @@ const FolderDetail = () => {
           <p>No flashcards found for this folder.</p>
         )}
          <button className="add-flashcard-btn" onClick={addFlashcard}>+ Add Flashcard</button>
-        <button className="save-folder-btn" onClick={saveFlashcardsToFirebase}>
+        <button className="save-folder-btn" onClick={saveFlashcardsToFlask}>
           Save Flashcards
         </button>
       </div>

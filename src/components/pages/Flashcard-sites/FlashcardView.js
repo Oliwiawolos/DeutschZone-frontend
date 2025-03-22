@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FlashcardView.css';
 import { useParams, useNavigate } from 'react-router-dom';
-import { db } from '../../FirebaseConfig';
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import Footer from '../../Footer';
 
 const FlashcardViewer = () => {
@@ -17,22 +15,16 @@ const FlashcardViewer = () => {
   useEffect(() => {
     const fetchFolderDetails = async () => {
       try {
-        const folderDoc = doc(db, 'folders', id);
-        const folderSnapshot = await getDoc(folderDoc);
+        const folderResponse = await fetch(`http://127.0.0.1:5000/folders/${id}`);
+        const folderData = await folderResponse.json();
 
-        if (folderSnapshot.exists()) {
-          setFolderName(folderSnapshot.data().name); 
-
-          const flashcardsCollection = collection(db, `folders/${id}/flashcards`);
-          const flashcardsSnapshot = await getDocs(flashcardsCollection);
-          const flashcardsList = flashcardsSnapshot.docs.map(doc => ({
-            id: doc.id,
-            ...doc.data(),
-            tags: doc.data().tags || []
-          }));
-
-          setFlashcards(flashcardsList); 
+        if (folderData.length > 0) {
+          setFolderName(folderData[0].name);
         }
+        const flashcardsResponse = await fetch(`http://127.0.0.1:5000/flashcards/${id}`);
+        const flashcardsData = await flashcardsResponse.json();
+
+        setFlashcards(flashcardsData);
       } catch (error) {
         console.error("Error fetching flashcards:", error);
       }
