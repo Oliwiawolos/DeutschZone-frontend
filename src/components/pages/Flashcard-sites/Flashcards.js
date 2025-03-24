@@ -60,8 +60,12 @@ const handleDeleteFolder = async (folderId) => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="page-wrapper">
   <div className="page-content">
+=======
+    <>
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
     <div className="flashcards-container2"> 
       <h1>Flashcards</h1>
       <p>Learning German is a journey, and what better way to tailor it than by creating your own flashcards? On our platform, you are in full control of what you learn.</p>
@@ -94,9 +98,14 @@ const handleDeleteFolder = async (folderId) => {
     )}
     </div>
     </div>
+<<<<<<< HEAD
     </div>
     <Footer />
     </div>
+=======
+    <Footer />
+    </>
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
   );
 };
 

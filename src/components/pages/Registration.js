@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../FirebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth"; 
 import './Login.css';
+<<<<<<< HEAD
 import axios from "axios";
+=======
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 import video2 from '../videos/landscape.mp4'
 import PersonIcon from '@mui/icons-material/Person';
 import '../../App.css';
@@ -31,6 +34,7 @@ const Registration = () => {
   
     try {
       await createUserWithEmailAndPassword(auth, email, password);
+<<<<<<< HEAD
       const user = auth.currentUser;
 
       await axios.post("http://localhost:5000/sync-user", {
@@ -38,6 +42,8 @@ const Registration = () => {
       firebase_uid: user.uid
 });
 
+=======
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       navigate("/login");
     } catch (err) {
       setError("Failed to create an account: " + err.message);

@@ -5,6 +5,10 @@
    justify-content: center;
    max-width: 1000px; 
    width: 100%; 
+<<<<<<< HEAD
+=======
+   min-height: 80vh; 
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
    margin: 0 auto; 
    box-sizing: border-box; 
    color: rgb(0, 0, 0);
@@ -16,7 +20,10 @@
    display: flex; 
    flex-direction: column; 
    text-align: center;
+<<<<<<< HEAD
    
+=======
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 }
 .flashcards-container2 {
    display: flex;
@@ -102,6 +109,7 @@
     .folders-container h2{
         margin-left: -59%;
      }
+<<<<<<< HEAD
   }
   html, body, #root {
    height: 100%;
@@ -121,3 +129,6 @@
    flex-direction: column;
  }
  
+=======
+  }
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9

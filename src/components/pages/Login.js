@@ -4,7 +4,10 @@ import { auth } from "../FirebaseConfig";
 import {Link} from 'react-router-dom';
 import './Login.css'
 import '../../App.css'
+<<<<<<< HEAD
 import axios from 'axios';
+=======
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 import video2 from '../videos/landscape.mp4'
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
@@ -35,7 +38,11 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       const rememberMe = document.getElementById('remember-me').checked;
+<<<<<<< HEAD
       const user = auth.currentUser;
+=======
+  
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       if (rememberMe) {
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
@@ -43,10 +50,14 @@ const Login = () => {
         sessionStorage.setItem('email', email);
         sessionStorage.setItem('password', password);
       }
+<<<<<<< HEAD
       await axios.post("http://localhost:5000/sync-user", {
         email: user.email,
         firebase_uid: user.uid
       });
+=======
+  
+>>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       navigate("/login");
     } catch (err) {
       setError("Failed to log in");
