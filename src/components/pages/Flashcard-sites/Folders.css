@@ -1,6 +1,5 @@
 .folder-container{
     display: flex;
-<<<<<<< HEAD
    flex-direction: column; 
    align-items: center;
    justify-content: center;
@@ -33,20 +32,6 @@
     color: black;
     margin-top: 5%;
     margin-bottom:2%;
-=======
-    flex-flow: column;
-    align-items: center;
-    max-width: 1000px;
-    width: 50%;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: 1%;
-}
-.folder-container h1{
-    color: black;
-    margin-top: 0%;
-    margin-bottom: 3%;
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 }
 .folder-input {
     width: 100%;
@@ -59,7 +44,6 @@
     background-color: #f9f9f9;
     transition: border-color 0.3s ease; 
 }
-<<<<<<< HEAD
 .folder-input2 {
     width: 100%;
     text-align: center;
@@ -73,16 +57,10 @@
 }
 .inputs-container{
     margin-top: 2%;
-=======
-.inputs-container{
-    margin-top: 2%;
-    margin-left: -29.5%;
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 }
 .inputs {
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     justify-content: space-between;
     width: 100%;
     max-width: 800px;
@@ -91,33 +69,18 @@
   }
   
   
-=======
-    justify-content: space-between; 
-    width: 150%;
-}
-
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 .inputs-number {
     font-size: 1.6rem;
     padding-left: 1%;
 }
 
 .text-input, .text-def-input {
-<<<<<<< HEAD
     width:100%; 
     border-radius: 5px;
     border: 1px solid #ccc;
     text-align: center;
     margin: 5px;
    padding: 15px 50px;
-=======
-    width: 200%; 
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    text-align: center;
-    padding: 2%;
-    margin-left: 5%;
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 }
 .text-def-input{
     margin-right: 10px; 
@@ -142,7 +105,6 @@
 }
 .save-folder-btn{
     background-color: #ffd700;
-<<<<<<< HEAD
 }
 html, body, #root {
     height: 100%;
@@ -162,6 +124,3 @@ html, body, #root {
     flex-direction: column;
   }
   
-=======
-}
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
