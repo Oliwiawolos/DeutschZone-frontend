@@ -9,11 +9,8 @@ const FlashcardViewer = () => {
   const [folderName, setFolderName] = useState(""); 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [showTerm, setShowTerm] = useState(true);
-  const navigate = useNavigate();
-<<<<<<< HEAD
-=======
+  const navigate = useNavigate()
   const [searchTag, setSearchTag] = useState("");
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 
   useEffect(() => {
     const fetchFolderDetails = async () => {

@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import './Folders.css';
 import {useNavigate} from 'react-router-dom'
 import Footer from '../../Footer'
-<<<<<<< HEAD
 import { useAuth } from "../../AuthContext";
-=======
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 
 const Folders = () => {
   const [flashcards, setFlashcards] = useState([
@@ -14,11 +11,8 @@ const Folders = () => {
   ]);
   const [folderName, setFolderName] = useState(""); 
   const navigate = useNavigate(); 
-<<<<<<< HEAD
   const [errorMsg, setErrorMsg] = useState('');
   const { currentUser } = useAuth();
-=======
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 
   const addFlashcard = () => {
     setFlashcards([...flashcards, { id: flashcards.length + 1, term: '', definition: '' }]);
@@ -40,7 +34,6 @@ const Folders = () => {
   };
 
   const saveFolderToFlask = async () => {
-<<<<<<< HEAD
     const validFlashcards = flashcards.filter(fc => fc.term && fc.definition);
     const hasEmpty = flashcards.some(fc => !fc.term.trim() || !fc.definition.trim());
 
@@ -55,15 +48,10 @@ const Folders = () => {
 
     if (!folderName) {
       setErrorMsg("Folder name cannot be empty.");
-=======
-    if (!folderName) {
-      alert("Please enter a folder name.");
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       return;
     }
 
     try {
-<<<<<<< HEAD
       const response = await fetch('http://127.0.0.1:5000/folders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -95,53 +83,6 @@ const Folders = () => {
     <div className="folder-container">
       <h1>Create a New Folder</h1>
       {errorMsg && <p className="error-message2">{errorMsg}</p>}
-=======
-      const response = await fetch("http://127.0.0.1:5000/folders", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: folderName,
-          user_id: 1, 
-        }),
-      });
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.message || "Failed to create folder");
-      }
-  
-      const folderId = result.folder_id;
-  
-      for (const flashcard of flashcards) {
-        if (flashcard.term && flashcard.definition) {
-          await fetch("http://127.0.0.1:5000/flashcards", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              term: flashcard.term,
-              definition: flashcard.definition,
-              folder_id: folderId
-            }),
-          });
-        }
-      }
-  
-      alert("Folder and flashcards saved!");
-      navigate('/flashcards');
-  
-    } catch (error) {
-      console.error("Error saving folder or flashcards:", error);
-    }
-  };
-  return (
-    <>
-    <div className="folder-container">
-      <h1>Create a New Folder</h1>
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       <input 
         type="text" 
         placeholder="Name of folder" 
@@ -182,14 +123,9 @@ const Folders = () => {
       <button className="save-folder-btn" onClick={saveFolderToFlask}>Save a Folder</button>
 
     </div>
-<<<<<<< HEAD
     </div>
     <Footer />
     </div>
-=======
-    <Footer />
-    </>
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
   );
 };
 

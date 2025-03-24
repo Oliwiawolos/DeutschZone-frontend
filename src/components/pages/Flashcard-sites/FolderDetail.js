@@ -7,15 +7,10 @@ import Footer from '../../Footer';
 
 const FolderDetail = () => {
   const { id } = useParams(); 
-<<<<<<< HEAD
   const [folderName, setFolderName] = useState(""); 
   const [flashcards, setFlashcards] = useState([]);
   const navigate = useNavigate(); 
   const [errorMsg, setErrorMsg] = useState('');
-=======
-  const [flashcards, setFlashcards] = useState([]);
-  const navigate = useNavigate(); 
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
 
   useEffect(() => { 
     const fetchFlashcards = async () => {
@@ -23,12 +18,9 @@ const FolderDetail = () => {
         const response = await fetch(`http://127.0.0.1:5000/flashcards/${id}`);
         const data = await response.json();
         setFlashcards(data);
-<<<<<<< HEAD
         const folderResponse = await fetch(`http://127.0.0.1:5000/folder/${id}`);
         const folderData = await folderResponse.json();
         setFolderName(folderData.name);
-=======
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       } catch (error) {
         console.error("Error fetching flashcards:", error);
       }
@@ -58,7 +50,6 @@ const FolderDetail = () => {
     fetchFlashcards();
   }, [id]);
   const saveFlashcardsToFlask = async () => {
-<<<<<<< HEAD
     const validFlashcards = flashcards.filter(fc => fc.term && fc.definition);
     const hasEmpty = flashcards.some(fc => !fc.term.trim() || !fc.definition.trim());
 
@@ -71,8 +62,6 @@ const FolderDetail = () => {
       return;
     }
   
-=======
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
     try {
       for (const flashcard of flashcards) {
         if (flashcard.id) {
@@ -84,12 +73,7 @@ const FolderDetail = () => {
               definition: flashcard.definition,
             }),
           });
-<<<<<<< HEAD
         } else {
-=======
-        } 
-        else {
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
           await fetch('http://127.0.0.1:5000/flashcards', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -101,58 +85,40 @@ const FolderDetail = () => {
           });
         }
       }
-<<<<<<< HEAD
       await fetch(`http://127.0.0.1:5000/folder/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: folderName }),
       });
       setErrorMsg(""); 
-=======
-  
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       alert('Flashcards saved!');
       navigate('/flashcards');
     } catch (error) {
       console.error('Error saving flashcards:', error);
-<<<<<<< HEAD
       setErrorMsg("An error occurred while saving flashcards.");
-=======
-      alert('An error occurred while saving flashcards.');
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
     }
   };
   
   
-<<<<<<< HEAD
   
-=======
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
   const addFlashcard = () => {
     setFlashcards([...flashcards, { id: null, term: '', definition: '' }]);
   };
 
   const deleteFlashcard = async (flashcardId, index) => {
     try {
-<<<<<<< HEAD
       if (flashcardId) {
         await fetch(`http://127.0.0.1:5000/flashcards/${flashcardId}`, {
           method: 'DELETE',
         });
       }
   
-=======
-      await fetch(`http://127.0.0.1:5000/flashcards/${flashcardId}`, {
-        method: 'DELETE',
-      });
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
       setFlashcards((prev) => prev.filter((_, i) => i !== index));
     } catch (error) {
       console.error("Error deleting flashcard:", error);
     }
   };
   
-<<<<<<< HEAD
   return (
     <div className="page-wrapper">
   <div className="page-content">
@@ -166,17 +132,6 @@ const FolderDetail = () => {
         className="folder-input2"
         />
 
-=======
-  
-
-
-
-  return (
-    <>
-      <div className="folder-container">
-        <h1 style={{marginBottom: '-3%'}}>Folder Edit</h1>
-        
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
         {flashcards.length > 0 ? (
           <div className="inputs-container">
             {flashcards.map((flashcard, index) => (
@@ -208,7 +163,6 @@ const FolderDetail = () => {
         ) : (
           <p>No flashcards found for this folder.</p>
         )}
-<<<<<<< HEAD
         
          <button className="add-flashcard-btn" onClick={addFlashcard}>+ Add Flashcard</button>
         <button className="save-folder-btn" onClick={saveFlashcardsToFlask}>
@@ -219,15 +173,6 @@ const FolderDetail = () => {
   </div>
       <Footer />
       </div>
-=======
-         <button className="add-flashcard-btn" onClick={addFlashcard}>+ Add Flashcard</button>
-        <button className="save-folder-btn" onClick={saveFlashcardsToFlask}>
-          Save Flashcards
-        </button>
-      </div>
-      <Footer />
-    </>
->>>>>>> 203d890dcfd549f64057364d33aa0b612056bed9
   );
 };
 
