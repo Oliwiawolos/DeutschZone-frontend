@@ -1,0 +1,123 @@
+.flashcards-container {
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   justify-content: center;
+   max-width: 1000px; 
+   width: 100%; 
+   margin: 0 auto; 
+   box-sizing: border-box; 
+   color: rgb(0, 0, 0);
+   text-align: justify;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cards_items {
+   display: flex; 
+   flex-direction: column; 
+   text-align: center;
+   
+}
+.flashcards-container2 {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   max-width: 1000px;
+   width: 50%;
+   margin: 0 auto;
+   justify-content: center;
+   margin-top: 1%;
+   color: rgb(0,0,0);
+   text-align: justify;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+     'Lucida Sans', Arial, sans-serif;
+ }
+ .flashcards-container2 h1{
+    color: #000;
+    margin-top: 0%;
+    border-bottom: 4px solid #ad3030;
+ }
+ .flashcards-container2 p{
+    margin-top: 2%;
+    font-size: 1.5rem;
+ }
+ .folders-container p {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin-top: -0..5%;
+   margin-bottom: 2%;
+}
+.folders-container{
+   width: 100%;
+}
+ .cards_items h1{
+    margin-bottom: 4%;
+    color: black;
+ }
+ .cards_items p{
+    margin-top: 2%;
+ }
+ .folder-item {
+   background-color: #f9f9f9;
+   padding: 15px;
+   margin-bottom: 15px;
+   width: 100%;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   text-align: center;
+ }
+ 
+ .folder-actions {
+   margin-top: 10px;
+ }
+ 
+ .folder-actions button {
+   margin: 5px;
+   padding: 8px 12px;
+   background-color: #e74c3c;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+ 
+ .folder-actions button:hover {
+   background-color: #c0392b;
+ }
+ .button-style{
+   font-size: 2.5rem;
+ }
+ @media screen and (max-width: 768px) {
+
+    .folders-container h2{
+        margin-left: -158%;
+     }
+     .flashcards-container{
+        width: 98%;
+     }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .folders-container h2{
+        margin-left: -59%;
+     }
+  }
+  html, body, #root {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .page-wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+ }
+ 
+ .page-content {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+ }
+ 

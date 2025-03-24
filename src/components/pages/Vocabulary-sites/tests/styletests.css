@@ -1,0 +1,71 @@
+.excercise-container {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+     }
+  
+  .excercise-card {
+    width: 100%;
+    padding-bottom: 5%;
+    max-width: 800px;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    text-align: center;
+  }
+  
+  .excercise-box{
+    margin-top:5%;
+  }
+  .animal-footer{
+    padding-bottom:-25%;
+  }
+  .draggable-list {
+    list-style: none;
+    margin-top:5%;
+  }
+  .texts-container .custom-button {
+    margin-left: 0%;
+    background-color: black;
+    margin-top: 6%;
+  }
+  .texts-container .custom-button:hover {
+    color: #ad3030;
+  }
+  .list-item {
+    padding: 1.5%;
+    padding-top:2%;
+    background-color: white;
+    border: 1px solid lightgrey;
+    cursor: grab;
+    user-select: none; 
+    display: flex;
+    align-items: center;
+  }
+  .texts-container .right{
+    margin-top:5%;
+  }
+  .texts-container{
+    display: flex;
+    flex-flow: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom:-7%;
+    color: rgb(0,0,0);
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .texts-container .custom-button{
+    background-color: black;
+    margin-bottom: 6%;
+    width: 50%;
+    margin-left: 20;
+  }
+  

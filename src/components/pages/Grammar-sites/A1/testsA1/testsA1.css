@@ -1,0 +1,85 @@
+.exercise-container {
+  display: flex;
+    flex-flow: column;
+    max-width: 1000px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1%;
+    color: rgb(0,0,0);
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+}
+
+.exercise-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  font-size: 1.2rem;
+  flex-wrap: nowrap; 
+  white-space: nowrap; 
+}
+
+.exercise-container p{
+  margin-bottom:4%;
+}
+.exercise-container h2{
+  margin-bottom:1.5%;
+}
+.number {
+  font-weight: bold;
+  margin-right: 2%;
+}
+
+.input-field {
+  width: 20%;
+  margin-left: 0.5%; 
+  margin-right: 0.5%;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+  text-align: center;
+  outline: none;
+  flex-shrink: 0;
+  border-bottom: 1px solid #333;
+}
+
+.verb {
+  background-color: #ffd700;
+  flex-shrink: 0;
+  border-radius: 3px;
+  margin-right: 1%;
+  margin-left:1%;
+}
+.verb-button {
+  margin: 2% auto; 
+  padding: 2% 2%;
+  background-color: #ad3030;
+  color: white;
+  margin-bottom: -3%;
+  border: none;
+  cursor: pointer;
+  display: block; 
+  text-align: center;
+}
+
+.verb-button:hover {
+  background-color: #d84343;
+}
+
+.result {
+  font-weight: bold;
+  align-self: center;
+}
+
+.correct {
+  color: green;
+  font-size: 1.1rem; 
+  margin-left:1%;
+}
+
+.incorrect {
+  color: red;
+  font-size: 1.1rem; 
+  margin-left:1%;
+}

@@ -1,0 +1,15 @@
+.words{
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+    margin-top: 10%;
+    width: 100%;
+    border-style: outset;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+}
+.words h3{
+    color: #b22c2c;
+    padding-top: 2%;
+}

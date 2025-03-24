@@ -1,0 +1,50 @@
+.AudioPlayer-container{
+  display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+
+.audio-player {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.correct-answer {
+  color: green;
+}
+
+.incorrect-answer {
+  color: red;
+}
+
+.results-text {
+  margin-top: 40px;
+}
+.answer-option {
+  margin-top: 4%; 
+  margin-bottom: 4%;
+}
+.questions{
+  margin-top:5%;
+}
+.AudioPlayer-container .custom-button {
+  background-color: black;
+  margin-bottom: 6%;
+  width: 50%;
+  margin-left: 25%;
+}
+.AudioPlayer-container .custom-button:hover {
+  color: #ad3030;
+}
+.AudioPlayer-container .questions label {
+  cursor: pointer;
+}
+.AudioPlayer-container .results-text{
+  text-align: center;
+}

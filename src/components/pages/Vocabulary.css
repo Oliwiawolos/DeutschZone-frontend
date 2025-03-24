@@ -1,0 +1,64 @@
+.cards_items {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+    gap: 20px; 
+}
+
+.Vocabulary_item {
+    flex: 0 1 calc(50% - 20px); 
+    margin: 10px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    border-style: outset;
+}
+
+
+.vocabulary_img{
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: all 0.2s linear;
+}
+.Vocabulary_link {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: block; 
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.cards_items{
+    margin-bottom: 6%;
+}
+.Vocabulary_text{
+    margin-top:2%;
+    margin-bottom:3%;
+}
+.card1{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.vocabulary_img:hover{
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+.Vocabulary_item {
+    flex: 0 1 100%; 
+    margin: 10px 0;
+}
+}
