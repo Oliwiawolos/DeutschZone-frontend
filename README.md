@@ -5,18 +5,17 @@
 - [Example usage scenario](#example-usage-scenario)
 
 ## General Info
-DeutschZone is a web platform dedicated to facilitating the effective learning of the German language. The platform provides a complete set  of educational tools, including flashcards, grammar tutorials, vocabulary exercises, and listening practice, all designed to enhance the language acquisition process. 
+The frontend for DeutschZone is a web application built with **ReactJS**. This part of the project handles the user interface, allowing users to interact with the platform, register, log in, and utilize the features such as flashcards, textsgrammar lessons, vocabulary exercises, and listening practice.
 
 ### Technologies Used
 * React JS
 * CSS
 * Firebase
-* Git  
 * HTML
-* SQL
+* Axios
 
 ### Installation and Setup
-1. Clone the repository: `git clone https://github.com/Oliwiawolos/DeutschZone`
+1. Clone the repository: `git clone https://github.com/Oliwiawolos/DeutschZone-frontend.git`
 2. Navigate to the project’s root directory
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
