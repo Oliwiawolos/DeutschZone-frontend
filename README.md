@@ -1,11 +1,11 @@
-# DeutschZone
+# DeutschZone Frontend
 - [General Info](#general-info)
 - [Technologies Used](#technologies-used)
 - [Installation and Setup](#installation-and-setup)
 - [Example usage scenario](#example-usage-scenario)
 
 ## General Info
-The frontend for DeutschZone is a web application built with **ReactJS**. This part of the project handles the user interface, allowing users to interact with the platform, register, log in, and utilize the features such as flashcards, textsgrammar lessons, vocabulary exercises, and listening practice.
+The frontend for DeutschZone is a web application built with **ReactJS**. This part of the project handles the user interface, allowing users to interact with the platform, register, log in, and utilize the features such as flashcards, texts, grammar lessons, vocabulary exercises, and listening practice.
 
 ### Technologies Used
 * React JS
@@ -20,6 +20,12 @@ The frontend for DeutschZone is a web application built with **ReactJS**. This p
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 5. Open the app in your browser at [http://localhost:3000](http://localhost:3000)
+
+### If you prefer Docker-based development: 
+1. Make sure you have a Dockerfile in the project root.
+2. Build the Docker image: `docker build -t projektowanie-frontend .` 
+3. Run the container: `docker run -p 3000:3000 projektowanie-frontend`
+4. Navigate to: `http://localhost:3000`.
 
 ## Example usage scenario
 #### Create a new user and log in
